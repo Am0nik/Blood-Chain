@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Chain</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="{% static 'images/logo.png' %}" alt="Logo" width="120" height="94" class="d-inline-block align-text-top">
+                <a class="navbar-brand" href="{% url 'index' %}">Blood Chain</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'features' %}">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'pricing' %}">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'map' %}">Map</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-------------------------------------------->
+    <main>
+        <div class="card text-center">
+            <div class="card-header h2">
+                Test
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Blood Donation Testing</h5>
+                <p class="card-text">Find out if you are eligible to donate blood<sup><a href="https://www.who.int/campaigns/world-blood-donor-day/2018/who-can-give-blood#:~:text=Who%20can%20give%20blood,the%20date%20of%20the%20procedure." target="_blank" class="text-danger" style="font-weight: 600;">(According to WHO criteria)</a></sup></p>
+                <a href="#" class="btn btn-danger" id="takeTestBtn">Take the test</a>
+            </div>
+            </div>
+            <div class="continer">
+                <div class="card-group">
+                    {% for item in news %}
+                    <a class="card" href="{% url 'news' item.id %}" style="text-decoration: none; color: inherit;">
+                        <img src="{{ item.image.url }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="newsimage">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {{ item.title }}
+                            </h5>
+                            <p class="card-text">{{ item.description }}</p>
+                        </div>
+                        <!-- Footer теперь всегда будет прижат к низу, так как body выше имеет flex: 1 -->
+                        <div class="card-footer">
+                            <small class="text-body-secondary">{{ item.created_at|date:"F j, Y" }}</small>
+                        </div>
+                    </a >
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-------------------------------------------->
+    <div class="container"> 
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"> 
+            <div class="col mb-3"> 
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap"> 
+                    <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg> 
+                </a> 
+                <p class="text-body-secondary">© 2026</p> 
+            </div> 
+            <div class="col mb-3"></div> 
+            <div class="col mb-3"> 
+                <h5>Section</h5> 
+                <ul class="nav flex-column"> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+                    </li> 
+                </ul> 
+            </div> 
+            <div class="col mb-3"> 
+                <h5>Section</h5> 
+                <ul class="nav flex-column"> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+                    </li> 
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a>
+                    </li> 
+                </ul> 
+            </div> 
+            <div class="col mb-3"> 
+                <h5>Section</h5> 
+                <ul class="nav flex-column"> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+                    </li> 
+                    <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+                    </li> 
+                </ul> 
+            </div> 
+        </footer> 
+    </div>
+    <!----------------------------Modal----------------------------->
+    <div class="modal" tabindex="-1" id="testModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quiz</h5>
+                    <button type="button" class="btn-close closeTest" data-bs-dismiss="modal" aria-label="Close" ></button>
+                </div>
+                <div class="modal-body" id="quiz-container">
+                    
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary closeTest" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>
