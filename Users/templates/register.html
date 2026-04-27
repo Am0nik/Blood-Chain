@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 shadow p-4 rounded bg-light">
+                <a href="{% url 'index' %}" class="text-decoration-none text-muted small">← Back to Home</a>
+                <h2 class="text-center mb-4 text-danger">🩸 Join Blood Chain</h2>
+
+                <form method="post" enctype="multipart/form-data" class="needs-validation">
+                    {% csrf_token %}
+
+                    <div class="row">
+                        <!--username-->
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.username.id_for_label }}" class="form-label fw-bold">Username</label>
+                            {{ form.username }}
+                            <div class="form-text">Invisible to other members.</div>
+                            {% if form.username.errors %}<div class="text-danger small">{{ form.username.errors }}</div>{% endif %}
+                        </div>
+                        <!--email-->
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.email.id_for_label }}" class="form-label fw-bold">Email address</label>
+                            {{ form.email }}
+                            {% if form.email.errors %}<div class="text-danger small">{{ form.email.errors }}</div>{% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Full Name-->
+                        <div class="col-md-12 mb-3">
+                            <label for="{{ form.full_name.id_for_label }}" class="form-label fw-bold">Full Name</label>
+                            {{ form.full_name }}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!--blood type-->
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.blood_type.id_for_label }}" class="form-label fw-bold text-danger">Blood Type</label>
+                            {{ form.blood_type }}
+                            <div class="form-text">Crucial for matching.</div>
+                        </div>
+
+                        <!--phone-->
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.phone_number.id_for_label }}" class="form-label fw-bold">Phone Number</label>
+                            {{ form.phone_number }}
+                        </div>
+                    </div>
+
+                    <!--profile photo-->
+                    <div class="mb-3">
+                        <label for="{{ form.photo.id_for_label }}" class="form-label fw-bold">Profile Photo</label>
+                        <div class="input-group">
+                            {{ form.photo }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Password</label>
+                            {{ form.password1 }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Confirm Password</label>
+                            {{ form.password2 }}
+                        </div>
+                    </div>
+                    <div class="form-check mb-3">
+                        {{ form.terms }}
+                        <label class="form-check-label ms-2 fw-bold" for="{{ form.terms.id_for_label }}">
+                            I agree to the <a href="#" class="text-danger">Terms and Conditions</a>
+                        </label>
+                        {% if form.terms.errors %}
+                            <div class="text-danger small">{{ form.terms.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-danger btn-lg">Register as Hero</button>
+                    </div>
+
+                    <p class="text-center mt-3 small text-muted">
+                        Already have an account? <a href="#" class="text-danger">Login here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</html>

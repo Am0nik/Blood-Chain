@@ -2,3 +2,74 @@ html, body {
   height: 100%;
   margin: 0;
 }
+.card-group {
+  display: flex !important;
+  flex-flow: row-reverse wrap !important;
+}
+.card-group .card:hover {
+  transition: transform 0.3s ease;
+  background-color: rgb(250, 250, 250) !important;
+}
+
+
+.blood-dashboard {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.test-tube-container {
+  text-align: center;
+  margin: 10px;
+}
+
+.test-tube {
+  width: 40px;
+  height: 150px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  border: 3px solid #dedede ;
+  border-top: none;
+  border-radius: 0 0 25px 25px; 
+  position: relative;
+  background: #f6fdff80 ;
+  overflow: hidden;
+}
+
+.liquid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top, #6d0000, #ff1919); 
+  transition: height 1s ease-in-out;
+}
+
+.warning {
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  animation: blink 1s infinite;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.percentage-text {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}

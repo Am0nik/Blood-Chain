@@ -1,0 +1,66 @@
+[
+{
+  "model": "Donations.bloodinventory",
+  "pk": 1,
+  "fields": {
+    "blood_type": "1+",
+    "percentage": 34
+  }
+},
+{
+  "model": "Donations.bloodinventory",
+  "pk": 2,
+  "fields": {
+    "blood_type": "1-",
+    "percentage": 50
+  }
+},
+{
+  "model": "Donations.bloodinventory",
+  "pk": 3,
+  "fields": {
+    "blood_type": "2+",
+    "percentage": 68
+  }
+},
+{
+  "model": "Donations.bloodinventory",
+  "pk": 4,
+  "fields": {
+    "blood_type": "2-",
+    "percentage": 69
+  }
+},
+{
+  "model": "Donations.bloodinventory",
+  "pk": 5,
+  "fields": {
+    "blood_type": "3+",
+    "percentage": 24
+  }
+},
+{
+  "model": "Donations.bloodinventory",
+  "pk": 6,
+  "fields": {
+    "blood_type": "3-",
+    "percentage": 16
+  }
+},
+{
+  "model": "Donations.bloodinventory",
+  "pk": 7,
+  "fields": {
+    "blood_type": "4+",
+    "percentage": 5
+  }
+},
+{
+  "model": "Donations.bloodinventory",
+  "pk": 8,
+  "fields": {
+    "blood_type": "4-",
+    "percentage": 9
+  }
+}
+]

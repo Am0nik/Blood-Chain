@@ -32,7 +32,10 @@
                             <a class="nav-link" href="{% url 'map' %}">Map</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                            <a class="nav-link" href="{% url 'about' %}">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'profile' %}"><b>Account</b></a>
                         </li>
                     </ul>
                 </div>
@@ -41,28 +44,27 @@
     </header>
     <!-------------------------------------------->
     <main>
-        <div class="card text-center">
+        <div class="card text-center"> 
             <div class="card-header h2">
                 Test
             </div>
             <div class="card-body">
                 <h5 class="card-title">Blood Donation Testing</h5>
                 <p class="card-text">Find out if you are eligible to donate blood<sup><a href="https://www.who.int/campaigns/world-blood-donor-day/2018/who-can-give-blood#:~:text=Who%20can%20give%20blood,the%20date%20of%20the%20procedure." target="_blank" class="text-danger" style="font-weight: 600;">(According to WHO criteria)</a></sup></p>
-                <a href="#" class="btn btn-danger" id="takeTestBtn">Take the test</a>
+                <a class="btn btn-danger" id="takeTestBtn" style="margin-bottom: 40px;">Take the test</a>
             </div>
-            </div>
+
             <div class="continer">
                 <div class="card-group">
                     {% for item in news %}
-                    <a class="card" href="{% url 'news' item.id %}" style="text-decoration: none; color: inherit;">
-                        <img src="{{ item.image.url }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="newsimage">
+                    <a class="card" href="{% url 'news' item.id %}" style="text-decoration: none; color: inherit;border-radius: 0;">
+                        <img src="{{ item.image.url }}" class="card-img-top" style="height: 200px; object-fit: cover;border-radius: 0;" alt="newsimage">
                         <div class="card-body">
                             <h5 class="card-title">
                                 {{ item.title }}
                             </h5>
                             <p class="card-text">{{ item.description }}</p>
                         </div>
-                        <!-- Footer теперь всегда будет прижат к низу, так как body выше имеет flex: 1 -->
                         <div class="card-footer">
                             <small class="text-body-secondary">{{ item.created_at|date:"F j, Y" }}</small>
                         </div>
@@ -70,83 +72,70 @@
                     {% endfor %}
                 </div>
             </div>
+
+            <div style="margin-top: 50px;">
+                <h2>Blood Stock Levels</h2>
+                <div class="blood-dashboard">    
+                    {% for item in blood_stocks %}
+                    <div class="test-tube-container">
+                        <div class="label">{{ item.blood_type }}</div>
+                        <div class="test-tube">
+                            <div class="liquid" style="height: {{ item.percentage }}%;">
+                                {% if item.percentage < 35 %}
+                                    <span class="warning">!</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="percentage-text"><b>{{ item.percentage }}%</b></div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
         </div>
     </main>
 
 
     <!-------------------------------------------->
-    <div class="container"> 
-        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"> 
-            <div class="col mb-3"> 
-                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap"> 
-                    <svg class="bi me-2" width="40" height="32" aria-hidden="true">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg> 
-                </a> 
-                <p class="text-body-secondary">© 2026</p> 
-            </div> 
-            <div class="col mb-3"></div> 
-            <div class="col mb-3"> 
-                <h5>Section</h5> 
-                <ul class="nav flex-column"> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-                    </li> 
-                </ul> 
-            </div> 
-            <div class="col mb-3"> 
-                <h5>Section</h5> 
-                <ul class="nav flex-column"> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-                    </li> 
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a>
-                    </li> 
-                </ul> 
-            </div> 
-            <div class="col mb-3"> 
-                <h5>Section</h5> 
-                <ul class="nav flex-column"> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-                    </li> 
-                    <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-                    </li> 
-                </ul> 
-            </div> 
-        </footer> 
+    <div class="container mt-5">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <span class="fs-4 fw-bold" style="color: #8b0000;">🩸 Blood Chain</span>
+                </a>
+                <p class="text-body-secondary small">Advancing blood donation through transparency and technology.</p>
+                <p class="text-body-secondary">© 2026</p>
+            </div>
+            <div class="col mb-3">
+                <h5 class="fw-bold mb-3">Navigation</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'features' %}" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'map' %}" class="nav-link p-0 text-body-secondary">Donation Map</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'about' %}" class="nav-link p-0 text-body-secondary">About Us</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h5 class="fw-bold mb-3">Account</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="{% url 'register' %}" class="nav-link p-0 text-body-secondary">Register as Donor</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'login' %}" class="nav-link p-0 text-body-secondary">Login</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h5 class="fw-bold mb-3">Social Media</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="https://youtube.com" class="nav-link p-0 text-body-secondary">YouTube</a></li>
+                    <li class="nav-item mb-2"><a href="https://facebook.com" class="nav-link p-0 text-body-secondary">Facebook</a></li>
+                    <li class="nav-item mb-2"><a href="https://x.com" class="nav-link p-0 text-body-secondary">X (Twitter)</a></li>
+                    <li class="nav-item mb-2"><a href="https://instagram.com" class="nav-link p-0 text-body-secondary">Instagram</a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
+
     <!----------------------------Modal----------------------------->
     <div class="modal" tabindex="-1" id="testModal">
         <div class="modal-dialog">
