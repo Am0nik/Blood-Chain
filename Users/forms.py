@@ -10,8 +10,16 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = User
-        fields = UserCreationForm.Meta.fields + (
-            'full_name', 'blood_type', 'phone_number', 'photo', 'terms','email'
+        fields = (
+            'username', 
+            'email', 
+            'full_name', 
+            'name', 
+            'blood_type', 
+            'phone_number', 
+            'photo', 
+            'address',
+            'terms'
         )
 
     def __init__(self, *args, **kwargs):
@@ -25,12 +33,15 @@ class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = User
         fields = (
-            'email', 
             'username', 
+            'email', 
             'full_name', 
+            'name', 
             'blood_type', 
             'phone_number', 
-            'photo'
+            'photo', 
+            'address',
+            'terms'
         )
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

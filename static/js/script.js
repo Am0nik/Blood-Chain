@@ -55,5 +55,6 @@ function showResult() {
 
 }
 
-// Запуск
+// start the quiz
 renderQuestion();
+

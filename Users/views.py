@@ -57,7 +57,38 @@ def settings_view(request):
     
     return render(request, 'settings.html', {'form': form})
 
+from django.core.paginator import Paginator
+@login_required
+def my_donations_view(request):
+    # 1. Данные для основной таблицы (с пагинацией)
+    donations_list = request.user.my_donations.all().order_by('-date')
+    paginator = Paginator(donations_list, 10) 
+    page_number = request.GET.get('page')
+    donations_obj = paginator.get_page(page_number)
+    user_donations = list(request.user.my_donations.all().order_by('-date')[:7])
+    first_date = None
+    last_date = None
+    if user_donations:
+        max_am = max(d.amount for d in user_donations) or 450
+        for donation in user_donations:
+            donation.bar_height = (donation.amount / max_am) * 100
+        
+        first_date = user_donations[-1].date 
+        last_date = user_donations[0].date
+    
+    context = {
+        'donations': donations_obj, 
+        'history': user_donations,
+        'first_date': first_date,
+        'last_date': last_date
+    }
+    
+    return render(request, 'my_donations.html', context)
+
 def logout_view(request):
     logout(request)
     messages.info(request, "You have been logged out")
     return redirect('index')
+
+def terms_and_conditions_view(request):
+    return render(request, 'termsandconditions.html')

@@ -117,11 +117,11 @@
                 </ul>
             </div>
             <div class="col mb-3">
-                <h5 class="fw-bold mb-3">Account</h5>
+                <h5 class="fw-bold mb-3"><a href="{% url 'profile' %}" class="nav-link p-0">Account</a></h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="{% url 'register' %}" class="nav-link p-0 text-body-secondary">Register as Donor</a></li>
                     <li class="nav-item mb-2"><a href="{% url 'login' %}" class="nav-link p-0 text-body-secondary">Login</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'terms' %}" class="nav-link p-0 text-body-secondary">Terms and Conditions</a></li>
                 </ul>
             </div>
             <div class="col mb-3">

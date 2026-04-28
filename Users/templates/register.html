@@ -34,29 +34,22 @@
                         </div>
                     </div>
                     <div class="row">
-                        <!--Full Name-->
+                        <!--surname-->
                         <div class="col-md-12 mb-3">
                             <label for="{{ form.full_name.id_for_label }}" class="form-label fw-bold">Full Name</label>
                             {{ form.full_name }}
                         </div>
                     </div>
-
                     <div class="row">
-                        <!--blood type-->
                         <div class="col-md-6 mb-3">
                             <label for="{{ form.blood_type.id_for_label }}" class="form-label fw-bold text-danger">Blood Type</label>
                             {{ form.blood_type }}
                             <div class="form-text">Crucial for matching.</div>
-                        </div>
-
-                        <!--phone-->
                         <div class="col-md-6 mb-3">
                             <label for="{{ form.phone_number.id_for_label }}" class="form-label fw-bold">Phone Number</label>
                             {{ form.phone_number }}
                         </div>
                     </div>
-
-                    <!--profile photo-->
                     <div class="mb-3">
                         <label for="{{ form.photo.id_for_label }}" class="form-label fw-bold">Profile Photo</label>
                         <div class="input-group">
@@ -76,7 +69,7 @@
                     <div class="form-check mb-3">
                         {{ form.terms }}
                         <label class="form-check-label ms-2 fw-bold" for="{{ form.terms.id_for_label }}">
-                            I agree to the <a href="#" class="text-danger">Terms and Conditions</a>
+                            I agree to the <a href="{% url 'terms' %}" class="text-danger">Terms and Conditions</a>
                         </label>
                         {% if form.terms.errors %}
                             <div class="text-danger small">{{ form.terms.errors }}</div>
@@ -87,7 +80,7 @@
                     </div>
 
                     <p class="text-center mt-3 small text-muted">
-                        Already have an account? <a href="#" class="text-danger">Login here</a>
+                        Already have an account? <a href="{% url 'login' %}" class="text-danger">Login here</a>
                     </p>
                 </form>
             </div>

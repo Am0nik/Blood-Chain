@@ -18,11 +18,11 @@ class User(AbstractUser):
     name = models.CharField(max_length=150, blank=True, null=True)
     full_name = models.CharField(max_length=255, blank=True, null=True)
     photo = ResizedImageField(
-        size=[300, 300],      # Максимальный размер (впишет в эти рамки)
-        crop=['middle', 'center'], # Обрежет по центру, чтобы было красиво
-        quality=75,           # Качество в % (75 — золотая середина)
+        size=[300, 300], 
+        crop=['middle', 'center'],
+        quality=75,
         upload_to='user_photos/', 
-        force_format='JPEG',  # Всегда сохранять как легкий JPEG
+        force_format='JPEG',
         blank=True, 
         null=True
     )
@@ -36,6 +36,20 @@ class User(AbstractUser):
         null=True
     )
     terms = models.BooleanField(default=False, verbose_name="Accept Terms and Conditions")
+
+    number_of_donations = models.PositiveIntegerField(default=0)
+    rank = models.CharField(max_length=20, default='Novice')
+
+    def save(self, *args, **kwargs):
+        if self.number_of_donations >= 10:
+            self.rank = 'Legendary Hero'
+        elif self.number_of_donations >= 5:
+            self.rank = 'Hero'
+        elif self.number_of_donations >= 1:
+            self.rank = 'Kind Soul'
+        else:
+            self.rank = 'Novice'
+        super().save(*args, **kwargs)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']

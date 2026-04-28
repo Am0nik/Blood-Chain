@@ -12,7 +12,6 @@ class News(models.Model):
         return self.title
     
 
-from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 class BloodInventory(models.Model):
@@ -54,3 +53,42 @@ class BloodInventory(models.Model):
 
     def __str__(self):
         return f"{self.get_blood_type_display()}: {self.percentage}%"
+
+
+from django.dispatch import receiver
+from django.db import transaction
+
+class Donation(models.Model):
+    user = models.ForeignKey('Users.User', on_delete=models.CASCADE, related_name='my_donations')
+    amount = models.PositiveIntegerField(default=450, help_text="Amount of blood donated in ml")
+    date = models.DateTimeField(auto_now_add=True)
+    blood_type_at_donation = models.CharField(max_length=3, editable=False)
+
+    class Meta:
+        verbose_name = "Blood Donation"
+        verbose_name_plural = "Blood Donations"
+
+    def save(self, *args, **kwargs):
+        if not self.pk:
+            with transaction.atomic():
+                self.blood_type_at_donation = self.user.blood_type
+                self.user.number_of_donations += 1
+                from .models import BloodInventory
+                inventory, _ = BloodInventory.objects.get_or_create(
+                    blood_type=self.blood_type_at_donation
+                )
+                
+                added_val = (self.amount / 450) * 1 # 450мл =1%
+                inventory.percentage = min(inventory.percentage + added_val, 100)
+                
+
+
+                inventory.save()
+                self.user.save()
+                
+                super().save(*args, **kwargs)
+        else:
+            super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"Donation {self.user.username} - {self.date.strftime('%d.%m.%Y')}"

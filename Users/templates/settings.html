@@ -30,7 +30,7 @@
                         <img src="https://placeholder.com" class="rounded-circle profile-img mb-2 shadow">
                     {% endif %}
                     <h6 class="fw-bold">{{ user.username }}</h6>
-                    <span class="badge bg-danger">Donor {{ user.blood_type }}</span>
+                    <span class="badge bg-danger">Donor ({{ user.blood_type }})</span>
                 </div>
 
                 <ul class="nav flex-column mt-4">
@@ -45,7 +45,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{% url 'my_donations' %}">
                             <i class="bi bi-droplet-fill me-2"></i> My Donations
                         </a>
                     </li>
@@ -79,8 +79,12 @@
                             {{ form.email }}
                             {% if form.email.errors %}<div class="text-danger small">{{ form.email.errors }}</div>{% endif %}
                         </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.name.id_for_label }}" class="form-label fw-bold small text-muted text-uppercase">Name</label>
+                            {{ form.name }}
+                        </div>
                         <div class="col-md-12 mb-3">
-                            <label for="{{ form.full_name.id_for_label }}" class="form-label fw-bold small text-muted text-uppercase">Full Name</label>
+                            <label for="{{ form.full_name.id_for_label }}" class="form-label fw-bold small text-muted text-uppercase">Surname</label>
                             {{ form.full_name }}
                         </div>
                         <div class="col-md-6 mb-3">
@@ -106,14 +110,6 @@
                             </div>
                         </div>
                     </div>
-                    {% if form.terms %}
-                    <div class="form-check mb-4">
-                        {{ form.terms }}
-                        <label class="form-check-label small" for="{{ form.terms.id_for_label }}">
-                            I confirm that the information provided is accurate
-                        </label>
-                    </div>
-                    {% endif %}
                     <div class="border-top pt-4">
                         <button type="submit" class="btn btn-danger px-5 shadow-sm">
                             <i class="bi bi-check-circle me-2"></i> Save Settings
