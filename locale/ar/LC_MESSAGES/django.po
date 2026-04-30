@@ -1,0 +1,462 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-30 20:24+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\Donations\templates\index.html:25 .\Donations\templates\index.html:224
+#: .\Users\templates\my_donations.html:45 .\Users\templates\profile.html:45
+#: .\Users\templates\settings.html:45
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+#: .\Donations\templates\index.html:28 .\Donations\templates\index.html:120
+#: .\Donations\templates\index.html:225
+msgid "Features"
+msgstr "المميزات"
+
+#: .\Donations\templates\index.html:31
+msgid "Pricing"
+msgstr "الأسعار"
+
+#: .\Donations\templates\index.html:34
+msgid "Map"
+msgstr "الخريطة"
+
+#: .\Donations\templates\index.html:37
+msgid "About us"
+msgstr "من نحن"
+
+#: .\Donations\templates\index.html:40 .\Donations\templates\index.html:231
+msgid "Account"
+msgstr "الحساب"
+
+#: .\Donations\templates\index.html:45
+msgid "Language"
+msgstr "لغة"
+
+#: .\Donations\templates\index.html:73
+msgid "Test"
+msgstr "اختبار"
+
+#: .\Donations\templates\index.html:76
+msgid "Blood Donation Testing"
+msgstr "فحص التبرع بالدم"
+
+#: .\Donations\templates\index.html:77
+msgid "Find out if you are eligible to donate blood"
+msgstr "اكتشف ما إذا كنت مؤهلاً للتبرع بالدم"
+
+#: .\Donations\templates\index.html:77
+msgid "According to WHO criteria"
+msgstr "وفقاً لمعايير منظمة الصحة العالمية"
+
+#: .\Donations\templates\index.html:78
+msgid "Take the test"
+msgstr "ابدأ الاختبار"
+
+#: .\Donations\templates\index.html:101
+msgid "Blood Stock Levels"
+msgstr "مستويات مخزون الدم"
+
+#: .\Donations\templates\index.html:128
+msgid "Real-Time Inventory"
+msgstr "مخزون مباشر"
+
+#: .\Donations\templates\index.html:129
+msgid ""
+"Access live data on blood availability across all connected medical centers "
+"instantly."
+msgstr "وصول فوري لبيانات توفر الدم في جميع المراكز الطبية المتصلة."
+
+#: .\Donations\templates\index.html:139
+msgid "Blockchain Security"
+msgstr "أمان البلوكشين"
+
+#: .\Donations\templates\index.html:140
+msgid ""
+"Every donation is encrypted and tracked, ensuring complete transparency and "
+"zero data fraud."
+msgstr ""
+"يتم تشفير وتتبع كل تبرع، مما يضمن الشفافية المطلقة وعدم التلاعب بالبيانات."
+
+#: .\Donations\templates\index.html:150
+msgid "Smart Donor Matching"
+msgstr "توفيق المتبرعين الذكي"
+
+#: .\Donations\templates\index.html:151
+msgid ""
+"Our system matches regional blood deficits with your profile to send "
+"targeted requests only when your help is truly vital."
+msgstr ""
+"يقوم نظامنا بمطابقة العجز الإقليمي في الدم مع ملفك الشخصي لإرسال طلبات محددة "
+"فقط عندما تكون مساعدتك حيوية حقاً."
+
+#: .\Donations\templates\index.html:159
+#| msgid "Blood Donation Testing"
+msgid "Donation Compensation"
+msgstr "فحص التبرع بالدم"
+
+#: .\Donations\templates\index.html:168
+msgid "Pediatric / Partial Unit"
+msgstr "وحدة أطفال / جزئية"
+
+#: .\Donations\templates\index.html:171
+msgid "Average reimbursement"
+msgstr "متوسط التعويض"
+
+#: .\Donations\templates\index.html:173
+msgid "Quick recovery time"
+msgstr "وقت تعافي سريع"
+
+#: .\Donations\templates\index.html:174
+msgid "Basic medical screening"
+msgstr "فحص طبي أساسي"
+
+#: .\Donations\templates\index.html:182
+msgid "STANDARD DOSE"
+msgstr "الجرعة القياسية"
+
+#: .\Donations\templates\index.html:189
+msgid "Standard Whole Blood Unit"
+msgstr "وحدة دم كامل قياسية"
+
+#: .\Donations\templates\index.html:192
+msgid "Global average rate"
+msgstr "المعدل العالمي المتوسط"
+
+#: .\Donations\templates\index.html:194
+msgid "Full health report"
+msgstr "تقرير صحي كامل"
+
+#: .\Donations\templates\index.html:195
+msgid "High impact on lives"
+msgstr "تأثير كبير على حياة الآخرين"
+
+#: .\Donations\templates\index.html:196
+msgid "Post-donation meal"
+msgstr "وجبة ما بعد التبرع"
+
+#: .\Donations\templates\index.html:203
+msgid "Reimbursement values may vary by country and local regulations."
+msgstr "قد تختلف قيم التعويض حسب الدولة واللوائح المحلية."
+
+msgid "At BloodChain, we believe that in the age of rapid technological advancement, no human life should ever be lost due to a lack of blood availability. Our journey began with a simple but profound observation: the world has enough potential donors, but the bridge between them and those in critical need is often broken, slow, or opaque. BloodChain is not just another database; it is a global, decentralized ecosystem designed to revolutionize how we think about, manage, and execute blood donation. We leverage the power of modern web technologies and transparent data management to ensure that every drop counts and every donor is recognized. Despite medical breakthroughs, blood shortage remains a silent global crisis. Every two seconds, someone in the world needs blood. However, current systems often struggle with inefficient logistical chains, delayed emergency notifications, and a lack of public trust in how their donations are utilized. Rare blood types frequently go missing when they are needed most, and communication between regional medical centers is often fragmented. BloodChain was built as a direct response to these systemic failures, providing a unified, real-time solution that scales across borders and languages. Our platform stands on three fundamental pillars: Transparency, Accessibility, and Recognition. By using advanced tracking, we provide medical institutions with an immutable record of blood stocks. This eliminates data fraud and ensures that supply levels are always accurate. With support for seven major languages and a mobile-first design, we lower the barrier to entry for donors worldwide. Whether you are in a bustling metropolis or a remote village, BloodChain connects you to the nearest life-saving opportunity. We gamify the experience to build a lifelong habit of donation. Through digital achievements and a clear impact history, donors can see exactly how many lives they’ve helped save. We are constantly evolving. Our roadmap includes integrating AI-driven predictive analytics to forecast regional blood demand before a crisis occurs. By analyzing seasonal trends and local health data, BloodChain will move from being reactive to proactive, alerting donors weeks in advance of a predicted shortage. BloodChain is more than a project; it is a movement. We invite medical centers, governments, and every healthy individual to join our network. Together, we can turn a fragmented system into a resilient, technology-driven chain of life. Your contribution today is the heartbeat of tomorrow."
+msgstr "في BloodChain، نؤمن أنه في عصر التقدم التكنولوجي السريع، لا ينبغي أبداً فقدان أي حياة بشرية بسبب نقص توفر الدم. رحلتنا بدأت بملاحظة بسيطة وعميقة: العالم لديه ما يكفي من المتبرعين المحتملين، لكن الجسر بينهم وبين المحتاجين غالباً ما يكون مكسوراً أو بطيئاً أو غامضاً. BloodChain ليس مجرد قاعدة بيانات أخرى؛ إنه نظام بيئي عالمي لامركزي مصمم لإحداث ثورة في كيفية تفكيرنا في التبرع بالدم وإدارته وتنفيذه. نحن نسخر قوة تقنيات الويب الحديثة وإدارة البيانات الشفافة لضمان أن كل قطرة تُحتسب وأن كل متبرع يحظى بالتقدير. على الرغم من الاختراقات الطبية، لا يزال نقص الدم يمثل أزمة عالمية صامتة. تم بناء BloodChain كاستجابة مباشرة لهذه الإخفاقات النظامية، حيث يوفر حلاً موحداً في الوقت الفعلي يتوسع عبر الحدود واللغات. تعتمد منصتنا على ثلاث ركائز أساسية: الشفافية، وسهولة الوصول، والتقدير. من خلال استخدام التتبع المتقدم، نوفر للمؤسسات الطبية سجلاً غير قابل للتغيير لمخزونات الدم. سواء كنت في مدينة صاخبة أو قرية نائية، يربطك BloodChain بأقرب فرصة لإنقاذ الأرواح. نحن نجعل التجربة تفاعلية لبناء عادة تبرع مدى الحياة. BloodChain هو أكثر من مجرد مشروع؛ إنه حركة. معاً، يمكننا تحويل نظام مجزأ إلى سلسلة حياة مرنة تقودها التكنولوجيا. مساهمتك اليوم هي نبض قلب الغد."
+
+msgid "About"
+msgstr "عن"
+
+
+#: .\Donations\templates\index.html:218
+msgid "Advancing blood donation through transparency and technology."
+msgstr "تعزيز التبرع بالدم من خلال الشفافية والتكنولوجيا."
+
+#: .\Donations\templates\index.html:222
+msgid "Navigation"
+msgstr "التنقل"
+
+#: .\Donations\templates\index.html:226
+msgid "Donation Map"
+msgstr "خريطة التبرع"
+
+#: .\Donations\templates\index.html:227
+msgid "About Us"
+msgstr "عن الموقع"
+
+#: .\Donations\templates\index.html:233
+msgid "Register as Donor"
+msgstr "سجل كمتبرع"
+
+#: .\Donations\templates\index.html:234 .\Users\templates\login.html:8
+#: .\Users\templates\login.html:29
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: .\Donations\templates\index.html:235 .\Users\templates\register.html:74
+#: .\Users\templates\termsandconditions.html:8
+#: .\Users\templates\termsandconditions.html:18
+msgid "Terms and Conditions"
+msgstr "الشروط والأحكام"
+
+#: .\Donations\templates\index.html:239
+msgid "Social Media"
+msgstr "وسائل التواصل الاجتماعي"
+
+#: .\Donations\templates\index.html:241
+msgid "YouTube"
+msgstr "يوتيوب"
+
+#: .\Donations\templates\index.html:242
+msgid "Facebook"
+msgstr "فيسبوك"
+
+#: .\Donations\templates\index.html:243
+msgid "X (Twitter)"
+msgstr "إكس (تويتر)"
+
+#: .\Donations\templates\index.html:244
+msgid "Instagram"
+msgstr "إنستغرام"
+
+#: .\Donations\templates\index.html:255
+msgid "Quiz"
+msgstr "مسابقة"
+
+#: .\Donations\templates\index.html:263
+msgid "Close"
+msgstr "إغلاق"
+
+#: .\Users\templates\login.html:16
+msgid "← Back to Home"
+msgstr "← العودة إلى الرئيسية"
+
+#: .\Users\templates\login.html:17
+msgid "Welcome Back, Hero!"
+msgstr "مرحباً بعودتك، أيها البطل!"
+
+#: .\Users\templates\login.html:21
+msgid "Email address"
+msgstr "البريد الإلكتروني"
+
+#: .\Users\templates\login.html:25 .\Users\templates\register.html:63
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: .\Users\templates\login.html:32 .\Users\templates\register.html:17
+msgid "Join Blood Chain"
+msgstr "انضم إلى Blood Chain"
+
+#: .\Users\templates\my_donations.html:40 .\Users\templates\profile.html:40
+#: .\Users\templates\profile.html:69 .\Users\templates\settings.html:40
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: .\Users\templates\my_donations.html:50 .\Users\templates\profile.html:50
+#: .\Users\templates\settings.html:50
+msgid "My Donations"
+msgstr "تبرعاتي"
+
+#: .\Users\templates\my_donations.html:55 .\Users\templates\profile.html:55
+#: .\Users\templates\settings.html:8 .\Users\templates\settings.html:55
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: .\Users\templates\my_donations.html:60 .\Users\templates\profile.html:60
+#: .\Users\templates\settings.html:60
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: .\Users\templates\my_donations.html:69
+msgid "My Donations History"
+msgstr "سجل تبرعاتي"
+
+#: .\Users\templates\my_donations.html:72 .\Users\templates\profile.html:89
+msgid "Rank"
+msgstr "الرتبة"
+
+#: .\Users\templates\my_donations.html:79
+msgid "My Donation Activity"
+msgstr "نشاط تبرعاتي"
+
+#: .\Users\templates\my_donations.html:110
+msgid "Date"
+msgstr "التاريخ"
+
+#: .\Users\templates\my_donations.html:111
+msgid "Amount (ml)"
+msgstr "الكمية (مل)"
+
+#: .\Users\templates\my_donations.html:112 .\Users\templates\profile.html:86
+#: .\Users\templates\register.html:46
+msgid "Blood Type"
+msgstr "فصيلة الدم"
+
+#: .\Users\templates\my_donations.html:130
+msgid "Previous"
+msgstr "السابق"
+
+#: .\Users\templates\my_donations.html:141
+msgid "Next"
+msgstr "التالي"
+
+#: .\Users\templates\my_donations.html:147
+msgid "You haven't made any donations yet"
+msgstr "لم تقم بأي تبرعات بعد"
+
+#: .\Users\templates\profile.html:71
+msgid "Edit in Settings"
+msgstr "تعديل في الإعدادات"
+
+#: .\Users\templates\profile.html:97 .\Users\templates\register.html:25
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: .\Users\templates\profile.html:101
+msgid "Name"
+msgstr "الاسم"
+
+#: .\Users\templates\profile.html:105 .\Users\templates\register.html:32
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: .\Users\templates\profile.html:109
+msgid "Surname"
+msgstr "اللقب"
+
+#: .\Users\templates\profile.html:113
+msgid "Phone"
+msgstr "الهاتف"
+
+#: .\Users\templates\profile.html:117
+msgid "Address"
+msgstr "العنوان"
+
+#: .\Users\templates\register.html:8
+msgid "Register"
+msgstr "تسجيل"
+
+#: .\Users\templates\register.html:16
+msgid "Back to Home"
+msgstr "العودة إلى الرئيسية"
+
+#: .\Users\templates\register.html:40
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: .\Users\templates\register.html:51
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: .\Users\templates\register.html:56
+msgid "Profile Photo"
+msgstr "الصورة الشخصية"
+
+#: .\Users\templates\register.html:67
+msgid "Confirm Password"
+msgstr "تأكيد كلمة المرور"
+
+#: .\Users\templates\register.html:74
+msgid "I agree to the"
+msgstr "أوافق على"
+
+#: .\Users\templates\register.html:81
+msgid "Register as Hero"
+msgstr "التسجيل كبطل"
+
+#: .\Users\templates\register.html:85
+msgid "Login here"
+msgstr "سجل دخولك من هنا"
+
+#: .\Users\templates\settings.html:34
+msgid "Donor"
+msgstr "متبرع"
+
+#: .\Users\templates\settings.html:68
+msgid "Edit Profile"
+msgstr "تعديل الملف الشخصي"
+
+#: .\Users\templates\settings.html:116
+msgid "Save Settings"
+msgstr "حفظ الإعدادات"
+
+#: .\Users\templates\settings.html:118
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: .\Users\templates\termsandconditions.html:19
+msgid "Last Updated"
+msgstr "آخر تحديث"
+
+#: .\Users\templates\termsandconditions.html:20
+msgid "1. Acceptance of Terms"
+msgstr "1. قبول الشروط"
+
+#: .\Users\templates\termsandconditions.html:22
+msgid "2. User Eligibility and Registration"
+msgstr "2. أهلية المستخدم والتسجيل"
+
+#: .\Users\templates\termsandconditions.html:23
+msgid "Voluntary Donation"
+msgstr "التبرع التطوعي"
+
+#: .\Users\templates\termsandconditions.html:24
+msgid "Health Information"
+msgstr "المعلومات الصحية"
+
+#: .\Users\templates\termsandconditions.html:25
+msgid "Age Requirement"
+msgstr "متطلبات العمر"
+
+#: .\Users\templates\termsandconditions.html:26
+msgid "3. Data Privacy and Blockchain"
+msgstr "3. خصوصية البيانات والبلوكشين"
+
+#: .\Users\templates\termsandconditions.html:27
+msgid "Transparency"
+msgstr "الشفافية"
+
+#: .\Users\templates\termsandconditions.html:28
+msgid "Anonymity"
+msgstr "إخفاء الهوية"
+
+#: .\Users\templates\termsandconditions.html:29
+msgid "4. Blood Inventory and Ranks"
+msgstr "4. مخزون الدم والرتب"
+
+#: .\Users\templates\termsandconditions.html:30
+msgid "Real-time Tracking"
+msgstr "التتبع اللحظي"
+
+#: .\Users\templates\termsandconditions.html:31
+msgid "Gamification"
+msgstr "نظام المكافآت (Gamification)"
+
+#: .\Users\templates\termsandconditions.html:32
+msgid "5. Disclaimer of Liability"
+msgstr "5. إخلاء المسؤولية"
+
+#: .\Users\templates\termsandconditions.html:33
+msgid ""
+"Blood Chain is a platform to connect donors and institutions. We are not a "
+"medical facility. Actual blood collection and testing are performed by "
+"certified medical professionals. Blood Chain is not liable for any medical "
+"complications arising from the physical act of donation."
+msgstr ""
+"Blood Chain هي منصة لربط المتبرعين بالمؤسسات. نحن لسنا منشأة طبية. يتم إجراء "
+"عمليات جمع الدم والفحوصات الفعلية من قبل متخصصين طبيين معتمدين. لا تتحمل "
+"Blood Chain المسؤولية عن أي مضاعفات طبية تنشأ عن عملية التبرع الفعلية."
+
+#: .\Users\templates\termsandconditions.html:34
+msgid "6. Prohibited Conduct"
+msgstr "6. السلوك المحظور"
+
+#: .\Users\templates\termsandconditions.html:35
+msgid "Users are prohibited from:"
+msgstr "يحظر على المستخدمين ما يلي:"
+
+#: .\Users\templates\termsandconditions.html:37
+msgid "Creating multiple accounts to manipulate donation statistics."
+msgstr "إنشاء حسابات متعددة للتلاعب بإحصائيات التبرع."
+
+#: .\Users\templates\termsandconditions.html:38
+msgid "Providing false health documentation."
+msgstr "تقديم وثائق صحية مزورة."
+
+#: .\Users\templates\termsandconditions.html:39
+msgid "Attempting to disrupt the blockchain network or platform security."
+msgstr "محاولة اختراق شبكة البلوكشين أو أمن المنصة."

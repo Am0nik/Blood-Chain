@@ -1,0 +1,461 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-30 20:24+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\Donations\templates\index.html:25 .\Donations\templates\index.html:224
+#: .\Users\templates\my_donations.html:45 .\Users\templates\profile.html:45
+#: .\Users\templates\settings.html:45
+msgid "Home"
+msgstr "首页"
+
+#: .\Donations\templates\index.html:28 .\Donations\templates\index.html:120
+#: .\Donations\templates\index.html:225
+msgid "Features"
+msgstr "功能特点"
+
+#: .\Donations\templates\index.html:31
+msgid "Pricing"
+msgstr "价格"
+
+#: .\Donations\templates\index.html:34
+msgid "Map"
+msgstr "地图"
+
+#: .\Donations\templates\index.html:37
+msgid "About us"
+msgstr "关于我们"
+
+#: .\Donations\templates\index.html:40 .\Donations\templates\index.html:231
+msgid "Account"
+msgstr "账户"
+
+#: .\Donations\templates\index.html:45
+msgid "Language"
+msgstr "语言"
+
+#: .\Donations\templates\index.html:73
+msgid "Test"
+msgstr "测试"
+
+#: .\Donations\templates\index.html:76
+msgid "Blood Donation Testing"
+msgstr "献血资格检测"
+
+#: .\Donations\templates\index.html:77
+msgid "Find out if you are eligible to donate blood"
+msgstr "查询您是否符合献血条件"
+
+#: .\Donations\templates\index.html:77
+msgid "According to WHO criteria"
+msgstr "根据世卫组织 (WHO) 标准"
+
+#: .\Donations\templates\index.html:78
+msgid "Take the test"
+msgstr "开始测试"
+
+#: .\Donations\templates\index.html:101
+msgid "Blood Stock Levels"
+msgstr "血液库存水平"
+
+#: .\Donations\templates\index.html:128
+msgid "Real-Time Inventory"
+msgstr "实时库存查询"
+
+#: .\Donations\templates\index.html:129
+msgid ""
+"Access live data on blood availability across all connected medical centers "
+"instantly."
+msgstr "即时访问所有联网医疗中心的血液供应实时数据。"
+
+#: .\Donations\templates\index.html:139
+msgid "Blockchain Security"
+msgstr "区块链安全保障"
+
+#: .\Donations\templates\index.html:140
+msgid ""
+"Every donation is encrypted and tracked, ensuring complete transparency and "
+"zero data fraud."
+msgstr "每份捐赠都经过加密和追踪，确保完全透明且零数据欺诈。"
+
+#: .\Donations\templates\index.html:150
+msgid "Smart Donor Matching"
+msgstr "智能献血匹配"
+
+#: .\Donations\templates\index.html:151
+msgid ""
+"Our system matches regional blood deficits with your profile to send "
+"targeted requests only when your help is truly vital."
+msgstr ""
+"我们的系统将区域血液短缺情况与您的个人资料进行匹配，仅在您的帮助至关重要时发"
+"送针对性请求。"
+
+#: .\Donations\templates\index.html:159
+#| msgid "Blood Donation Testing"
+msgid "Donation Compensation"
+msgstr "献血资格检测"
+
+#: .\Donations\templates\index.html:168
+msgid "Pediatric / Partial Unit"
+msgstr "儿童 / 部分单位"
+
+#: .\Donations\templates\index.html:171
+msgid "Average reimbursement"
+msgstr "平均报销额"
+
+#: .\Donations\templates\index.html:173
+msgid "Quick recovery time"
+msgstr "恢复时间快"
+
+#: .\Donations\templates\index.html:174
+msgid "Basic medical screening"
+msgstr "基础医疗筛查"
+
+#: .\Donations\templates\index.html:182
+msgid "STANDARD DOSE"
+msgstr "标准剂量"
+
+#: .\Donations\templates\index.html:189
+msgid "Standard Whole Blood Unit"
+msgstr "标准全血单位"
+
+#: .\Donations\templates\index.html:192
+msgid "Global average rate"
+msgstr "全球平均水平"
+
+#: .\Donations\templates\index.html:194
+msgid "Full health report"
+msgstr "全面健康报告"
+
+#: .\Donations\templates\index.html:195
+msgid "High impact on lives"
+msgstr "对生命的重大贡献"
+
+#: .\Donations\templates\index.html:196
+msgid "Post-donation meal"
+msgstr "献血后餐饮"
+
+#: .\Donations\templates\index.html:203
+msgid "Reimbursement values may vary by country and local regulations."
+msgstr "补偿金额可能因国家和当地法规而异。"
+
+
+msgid "At BloodChain, we believe that in the age of rapid technological advancement, no human life should ever be lost due to a lack of blood availability. Our journey began with a simple but profound observation: the world has enough potential donors, but the bridge between them and those in critical need is often broken, slow, or opaque. BloodChain is not just another database; it is a global, decentralized ecosystem designed to revolutionize how we think about, manage, and execute blood donation. We leverage the power of modern web technologies and transparent data management to ensure that every drop counts and every donor is recognized. Despite medical breakthroughs, blood shortage remains a silent global crisis. Every two seconds, someone in the world needs blood. However, current systems often struggle with inefficient logistical chains, delayed emergency notifications, and a lack of public trust in how their donations are utilized. Rare blood types frequently go missing when they are needed most, and communication between regional medical centers is often fragmented. BloodChain was built as a direct response to these systemic failures, providing a unified, real-time solution that scales across borders and languages. Our platform stands on three fundamental pillars: Transparency, Accessibility, and Recognition. By using advanced tracking, we provide medical institutions with an immutable record of blood stocks. This eliminates data fraud and ensures that supply levels are always accurate. With support for seven major languages and a mobile-first design, we lower the barrier to entry for donors worldwide. Whether you are in a bustling metropolis or a remote village, BloodChain connects you to the nearest life-saving opportunity. We gamify the experience to build a lifelong habit of donation. Through digital achievements and a clear impact history, donors can see exactly how many lives they’ve helped save. We are constantly evolving. Our roadmap includes integrating AI-driven predictive analytics to forecast regional blood demand before a crisis occurs. By analyzing seasonal trends and local health data, BloodChain will move from being reactive to proactive, alerting donors weeks in advance of a predicted shortage. BloodChain is more than a project; it is a movement. We invite medical centers, governments, and every healthy individual to join our network. Together, we can turn a fragmented system into a resilient, technology-driven chain of life. Your contribution today is the heartbeat of tomorrow."
+msgstr "在 BloodChain，我们相信在这个技术飞速发展的时代，不应该有人因为血液供应不足而失去生命。我们的旅程始于一个简单但深刻的观察：世界上有足够的潜在献血者，但他们与急需帮助的人之间的桥梁往往是断裂的、缓慢的或不透明的。BloodChain 不仅仅是一个数据库；它是一个全球性的、去中心化的生态系统，旨在彻底改变我们思考、管理和执行献血的方式。我们利用现代网络技术和透明数据管理的力量，确保每一滴血液都有价值，每一位献血者都能得到认可。尽管医学取得了突破，血液短缺仍然是一个全球性的无声危机。每隔两秒，世界上就有人需要血液。BloodChain 的建立是对这些系统性故障的直接回应，提供了一个跨越国界和语言的统一、实时解决方案。我们的平台立足于三大支柱：透明度、可及性和认可。通过使用先进的追踪技术，我们为医疗机构提供不可篡改的血液库存记录。无论您是在繁华的大都市还是偏远的乡村，BloodChain 都能为您连接到最近的救命机会。我们将这种体验游戏化，以培养终身献血的习惯。BloodChain 不仅仅是一个项目；它是一场运动。齐心协力，我们可以将一个支离破碎的系统转变为一个富有弹性的、技术驱动的生命链。您今天的贡献，就是明天的希望。"
+
+msgid "About"
+msgstr "关于"
+
+
+#: .\Donations\templates\index.html:218
+msgid "Advancing blood donation through transparency and technology."
+msgstr "通过透明度和技术推动献血事业发展。"
+
+#: .\Donations\templates\index.html:222
+msgid "Navigation"
+msgstr "导航"
+
+#: .\Donations\templates\index.html:226
+msgid "Donation Map"
+msgstr "献血地图"
+
+#: .\Donations\templates\index.html:227
+msgid "About Us"
+msgstr "关于我们"
+
+#: .\Donations\templates\index.html:233
+msgid "Register as Donor"
+msgstr "注册成为献血者"
+
+#: .\Donations\templates\index.html:234 .\Users\templates\login.html:8
+#: .\Users\templates\login.html:29
+msgid "Login"
+msgstr "登录"
+
+#: .\Donations\templates\index.html:235 .\Users\templates\register.html:74
+#: .\Users\templates\termsandconditions.html:8
+#: .\Users\templates\termsandconditions.html:18
+msgid "Terms and Conditions"
+msgstr "条款与条件"
+
+#: .\Donations\templates\index.html:239
+msgid "Social Media"
+msgstr "社交媒体"
+
+#: .\Donations\templates\index.html:241
+msgid "YouTube"
+msgstr "YouTube"
+
+#: .\Donations\templates\index.html:242
+msgid "Facebook"
+msgstr "Facebook"
+
+#: .\Donations\templates\index.html:243
+msgid "X (Twitter)"
+msgstr "X (推特)"
+
+#: .\Donations\templates\index.html:244
+msgid "Instagram"
+msgstr "Instagram"
+
+#: .\Donations\templates\index.html:255
+msgid "Quiz"
+msgstr "测验"
+
+#: .\Donations\templates\index.html:263
+msgid "Close"
+msgstr "关闭"
+
+#: .\Users\templates\login.html:16
+msgid "← Back to Home"
+msgstr "← 返回首页"
+
+#: .\Users\templates\login.html:17
+msgid "Welcome Back, Hero!"
+msgstr "欢迎回来，英雄！"
+
+#: .\Users\templates\login.html:21
+msgid "Email address"
+msgstr "电子邮箱地址"
+
+#: .\Users\templates\login.html:25 .\Users\templates\register.html:63
+msgid "Password"
+msgstr "密码"
+
+#: .\Users\templates\login.html:32 .\Users\templates\register.html:17
+msgid "Join Blood Chain"
+msgstr "加入 Blood Chain"
+
+#: .\Users\templates\my_donations.html:40 .\Users\templates\profile.html:40
+#: .\Users\templates\profile.html:69 .\Users\templates\settings.html:40
+msgid "Profile"
+msgstr "个人资料"
+
+#: .\Users\templates\my_donations.html:50 .\Users\templates\profile.html:50
+#: .\Users\templates\settings.html:50
+msgid "My Donations"
+msgstr "我的捐献"
+
+#: .\Users\templates\my_donations.html:55 .\Users\templates\profile.html:55
+#: .\Users\templates\settings.html:8 .\Users\templates\settings.html:55
+msgid "Settings"
+msgstr "设置"
+
+#: .\Users\templates\my_donations.html:60 .\Users\templates\profile.html:60
+#: .\Users\templates\settings.html:60
+msgid "Logout"
+msgstr "退出登录"
+
+#: .\Users\templates\my_donations.html:69
+msgid "My Donations History"
+msgstr "历史捐献记录"
+
+#: .\Users\templates\my_donations.html:72 .\Users\templates\profile.html:89
+msgid "Rank"
+msgstr "等级"
+
+#: .\Users\templates\my_donations.html:79
+msgid "My Donation Activity"
+msgstr "我的捐献活动"
+
+#: .\Users\templates\my_donations.html:110
+msgid "Date"
+msgstr "日期"
+
+#: .\Users\templates\my_donations.html:111
+msgid "Amount (ml)"
+msgstr "捐献量 (毫升)"
+
+#: .\Users\templates\my_donations.html:112 .\Users\templates\profile.html:86
+#: .\Users\templates\register.html:46
+msgid "Blood Type"
+msgstr "血型"
+
+#: .\Users\templates\my_donations.html:130
+msgid "Previous"
+msgstr "上一页"
+
+#: .\Users\templates\my_donations.html:141
+msgid "Next"
+msgstr "下一页"
+
+#: .\Users\templates\my_donations.html:147
+msgid "You haven't made any donations yet"
+msgstr "您目前还没有捐献记录"
+
+#: .\Users\templates\profile.html:71
+msgid "Edit in Settings"
+msgstr "在设置中编辑"
+
+#: .\Users\templates\profile.html:97 .\Users\templates\register.html:25
+msgid "Username"
+msgstr "用户名"
+
+#: .\Users\templates\profile.html:101
+msgid "Name"
+msgstr "名字"
+
+#: .\Users\templates\profile.html:105 .\Users\templates\register.html:32
+msgid "Email"
+msgstr "电子邮件"
+
+#: .\Users\templates\profile.html:109
+msgid "Surname"
+msgstr "姓氏"
+
+#: .\Users\templates\profile.html:113
+msgid "Phone"
+msgstr "电话"
+
+#: .\Users\templates\profile.html:117
+msgid "Address"
+msgstr "地址"
+
+#: .\Users\templates\register.html:8
+msgid "Register"
+msgstr "注册"
+
+#: .\Users\templates\register.html:16
+msgid "Back to Home"
+msgstr "返回首页"
+
+#: .\Users\templates\register.html:40
+msgid "Full Name"
+msgstr "全名"
+
+#: .\Users\templates\register.html:51
+msgid "Phone Number"
+msgstr "电话号码"
+
+#: .\Users\templates\register.html:56
+msgid "Profile Photo"
+msgstr "个人头像"
+
+#: .\Users\templates\register.html:67
+msgid "Confirm Password"
+msgstr "确认密码"
+
+#: .\Users\templates\register.html:74
+msgid "I agree to the"
+msgstr "我同意"
+
+#: .\Users\templates\register.html:81
+msgid "Register as Hero"
+msgstr "作为英雄注册"
+
+#: .\Users\templates\register.html:85
+msgid "Login here"
+msgstr "点此登录"
+
+#: .\Users\templates\settings.html:34
+msgid "Donor"
+msgstr "捐献者"
+
+#: .\Users\templates\settings.html:68
+msgid "Edit Profile"
+msgstr "编辑个人资料"
+
+#: .\Users\templates\settings.html:116
+msgid "Save Settings"
+msgstr "保存设置"
+
+#: .\Users\templates\settings.html:118
+msgid "Cancel"
+msgstr "取消"
+
+#: .\Users\templates\termsandconditions.html:19
+msgid "Last Updated"
+msgstr "最后更新"
+
+#: .\Users\templates\termsandconditions.html:20
+msgid "1. Acceptance of Terms"
+msgstr "1. 条款接受"
+
+#: .\Users\templates\termsandconditions.html:22
+msgid "2. User Eligibility and Registration"
+msgstr "2. 用户资格与注册"
+
+#: .\Users\templates\termsandconditions.html:23
+msgid "Voluntary Donation"
+msgstr "自愿捐献"
+
+#: .\Users\templates\termsandconditions.html:24
+msgid "Health Information"
+msgstr "健康信息"
+
+#: .\Users\templates\termsandconditions.html:25
+msgid "Age Requirement"
+msgstr "年龄要求"
+
+#: .\Users\templates\termsandconditions.html:26
+msgid "3. Data Privacy and Blockchain"
+msgstr "3. 数据隐私与区块链"
+
+#: .\Users\templates\termsandconditions.html:27
+msgid "Transparency"
+msgstr "透明性"
+
+#: .\Users\templates\termsandconditions.html:28
+msgid "Anonymity"
+msgstr "匿名性"
+
+#: .\Users\templates\termsandconditions.html:29
+msgid "4. Blood Inventory and Ranks"
+msgstr "4. 血液库存与等级"
+
+#: .\Users\templates\termsandconditions.html:30
+msgid "Real-time Tracking"
+msgstr "实时追踪"
+
+#: .\Users\templates\termsandconditions.html:31
+msgid "Gamification"
+msgstr "游戏化"
+
+#: .\Users\templates\termsandconditions.html:32
+msgid "5. Disclaimer of Liability"
+msgstr "5. 免责声明"
+
+#: .\Users\templates\termsandconditions.html:33
+msgid ""
+"Blood Chain is a platform to connect donors and institutions. We are not a "
+"medical facility. Actual blood collection and testing are performed by "
+"certified medical professionals. Blood Chain is not liable for any medical "
+"complications arising from the physical act of donation."
+msgstr ""
+"Blood Chain 是一个连接捐献者和机构的平台。我们不是医疗机构。实际的血液采集和"
+"检测由认证的医疗专业人员进行。对于因献血行为本身引起的任何医疗并发症，Blood "
+"Chain 不承担任何责任。"
+
+#: .\Users\templates\termsandconditions.html:34
+msgid "6. Prohibited Conduct"
+msgstr "6. 禁止行为"
+
+#: .\Users\templates\termsandconditions.html:35
+msgid "Users are prohibited from:"
+msgstr "用户禁止从事以下行为："
+
+#: .\Users\templates\termsandconditions.html:37
+msgid "Creating multiple accounts to manipulate donation statistics."
+msgstr "创建多个账户以操纵捐献统计数据。"
+
+#: .\Users\templates\termsandconditions.html:38
+msgid "Providing false health documentation."
+msgstr "提供虚假的健康证明文件。"
+
+#: .\Users\templates\termsandconditions.html:39
+msgid "Attempting to disrupt the blockchain network or platform security."
+msgstr "试图破坏区块链网络或平台安全性。"

@@ -1,6 +1,8 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}" {% if LANGUAGE_CODE == 'ar' %}dir="rtl"{% endif %}>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,24 +22,46 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">{% translate "Home" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'features' %}">Features</a>
+                            <a class="nav-link" href="#features">{% translate "Features" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'pricing' %}">Pricing</a>
+                            <a class="nav-link" href="#price">{% translate "Pricing" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'map' %}">Map</a>
+                            <a class="nav-link" href="{% url 'map' %}">{% translate "Map" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About us</a>
+                            <a class="nav-link" href="}">{% translate "About us" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'profile' %}"><b>Account</b></a>
+                            <a class="nav-link" href="{% url 'profile' %}"><b>{% translate "Account" %}</b></a>
                         </li>
                     </ul>
+                    <div class="dropdown ms-auto">
+                        <button class="btn btn-dark dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 100px;width: 100px;">
+                            <i class="bi bi-translate"></i> {% translate "Language" %}
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark text-center">
+                            {% get_current_language as CURRENT_LANG %}
+                            {% get_available_languages as ALL_LANGS %}
+                            {% for lang_code, lang_name in ALL_LANGS %}
+                            <li>
+                                <form action="{% url 'set_language' %}" method="post">
+                                    {% csrf_token %}
+                                    <input name="next" type="hidden" value="/"> 
+                                    <input name="language" type="hidden" value="{{ lang_code }}">
+                                    <button type="submit" class="dropdown-item {% if lang_code == CURRENT_LANG %}active{% endif %}">
+                                        {{ lang_name }} ({{ lang_code|upper }})
+                                    </button>
+                                </form>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -46,12 +70,12 @@
     <main>
         <div class="card text-center"> 
             <div class="card-header h2">
-                Test
+                {% translate "Test" %}
             </div>
             <div class="card-body">
-                <h5 class="card-title">Blood Donation Testing</h5>
-                <p class="card-text">Find out if you are eligible to donate blood<sup><a href="https://www.who.int/campaigns/world-blood-donor-day/2018/who-can-give-blood#:~:text=Who%20can%20give%20blood,the%20date%20of%20the%20procedure." target="_blank" class="text-danger" style="font-weight: 600;">(According to WHO criteria)</a></sup></p>
-                <a class="btn btn-danger" id="takeTestBtn" style="margin-bottom: 40px;">Take the test</a>
+                <h5 class="card-title">{% translate "Blood Donation Testing" %}</h5>
+                <p class="card-text">{% translate "Find out if you are eligible to donate blood" %}<sup><a href="https://www.who.int/campaigns/world-blood-donor-day/2018/who-can-give-blood#:~:text=Who%20can%20give%20blood,the%20date%20of%20the%20procedure." target="_blank" class="text-danger" style="font-weight: 600;">({% translate "According to WHO criteria" %})</a></sup></p>
+                <a class="btn btn-danger" id="takeTestBtn" style="margin-bottom: 40px;">{% translate "Take the test" %}</a>
             </div>
 
             <div class="continer">
@@ -74,7 +98,7 @@
             </div>
 
             <div style="margin-top: 50px;">
-                <h2>Blood Stock Levels</h2>
+                <h2>{% translate "Blood Stock Levels" %}</h2>
                 <div class="blood-dashboard">    
                     {% for item in blood_stocks %}
                     <div class="test-tube-container">
@@ -92,6 +116,101 @@
                 </div>
             </div>
 
+            <div id="features" class="container mt-5">
+                <h2 class="text-center mb-5 fw-bold">{% translate "Features" %}</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col text-center">
+                        <div class="card h-100 shadow-sm border-0 py-4">
+                            <div class="card-body">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-activity text-danger" style="font-size: 3.5rem;"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">{% translate "Real-Time Inventory" %}</h5>
+                                <p class="card-text text-muted">{% translate "Access live data on blood availability across all connected medical centers instantly." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="card h-100 shadow-sm border-0 py-4">
+                            <div class="card-body">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-shield-check text-primary" style="font-size: 3.5rem;"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">{% translate "Blockchain Security" %}</h5>
+                                <p class="card-text text-muted">{% translate "Every donation is encrypted and tracked, ensuring complete transparency and zero data fraud." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="card h-100 shadow-sm border-0 py-4">
+                            <div class="card-body">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-megaphone text-warning" style="font-size: 3.5rem;"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">{% translate "Smart Donor Matching" %}</h5>
+                                <p class="card-text text-muted">{% translate "Our system matches regional blood deficits with your profile to send targeted requests only when your help is truly vital." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="price" class="container mt-5">
+                <h2 class="text-center mb-5 fw-bold">{% translate "Donation Compensation" %}</h2>
+                <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                    <div class="col" style="max-width: 400px;">
+                        <div class="card h-100 shadow-sm border-0 text-center py-4">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <i class="bi bi-droplet text-danger" style="font-size: 2.5rem;"></i>
+                                </div>
+                                <h3 class="fw-bold">250 ml</h3>
+                                <p class="text-muted small">{% translate "Pediatric / Partial Unit" %}</p>
+                                <hr>
+                                <h2 class="card-title pricing-card-title">$25.00</h2>
+                                <p class="small text-secondary">{% translate "Average reimbursement" %}</p>
+                                <ul class="list-unstyled mt-3 mb-4 text-start px-4">
+                                    <li><i class="bi bi-check2 text-success"></i> {% translate "Quick recovery time" %}</li>
+                                    <li><i class="bi bi-check2 text-success"></i> {% translate "Basic medical screening" %}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="max-width: 400px;">
+                        <div class="card h-100 shadow-lg border-danger text-center py-4">
+                            <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+                                {% translate "STANDARD DOSE" %}
+                            </div>
+                            <div class="card-body mt-2">
+                                <div class="mb-3">
+                                    <i class="bi bi-droplet-half text-danger" style="font-size: 2.5rem;"></i>
+                                </div>
+                                <h3 class="fw-bold">450 ml</h3>
+                                <p class="text-muted small">{% translate "Standard Whole Blood Unit" %}</p>
+                                <hr>
+                                <h2 class="card-title pricing-card-title">$50.00</h2>
+                                <p class="small text-secondary">{% translate "Global average rate" %}</p>
+                                <ul class="list-unstyled mt-3 mb-4 text-start px-4">
+                                    <li><i class="bi bi-check2 text-success"></i> {% translate "Full health report" %}</li>
+                                    <li><i class="bi bi-check2 text-success"></i> {% translate "High impact on lives" %}</li>
+                                    <li><i class="bi bi-check2 text-success"></i> {% translate "Post-donation meal" %}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center mt-4 text-muted small">
+                    * {% translate "Reimbursement values may vary by country and local regulations." %}
+                </p>
+            </div>
+
+
+            <div class="container my-5" id="about-us">
+                <h1 class="mb-4">{% translate "About" %} BloodChain</h1>
+                <p class="lead">
+                    {% translate "At BloodChain, we believe that in the age of rapid technological advancement, no human life should ever be lost due to a lack of blood availability. Our journey began with a simple but profound observation: the world has enough potential donors, but the bridge between them and those in critical need is often broken, slow, or opaque. BloodChain is not just another database; it is a global, decentralized ecosystem designed to revolutionize how we think about, manage, and execute blood donation. We leverage the power of modern web technologies and transparent data management to ensure that every drop counts and every donor is recognized. Despite medical breakthroughs, blood shortage remains a silent global crisis. Every two seconds, someone in the world needs blood. However, current systems often struggle with inefficient logistical chains, delayed emergency notifications, and a lack of public trust in how their donations are utilized. Rare blood types frequently go missing when they are needed most, and communication between regional medical centers is often fragmented. BloodChain was built as a direct response to these systemic failures, providing a unified, real-time solution that scales across borders and languages. Our platform stands on three fundamental pillars: Transparency, Accessibility, and Recognition. By using advanced tracking, we provide medical institutions with an immutable record of blood stocks. This eliminates data fraud and ensures that supply levels are always accurate. With support for seven major languages and a mobile-first design, we lower the barrier to entry for donors worldwide. Whether you are in a bustling metropolis or a remote village, BloodChain connects you to the nearest life-saving opportunity. We gamify the experience to build a lifelong habit of donation. Through digital achievements and a clear impact history, donors can see exactly how many lives they’ve helped save. We are constantly evolving. Our roadmap includes integrating AI-driven predictive analytics to forecast regional blood demand before a crisis occurs. By analyzing seasonal trends and local health data, BloodChain will move from being reactive to proactive, alerting donors weeks in advance of a predicted shortage. BloodChain is more than a project; it is a movement. We invite medical centers, governments, and every healthy individual to join our network. Together, we can turn a fragmented system into a resilient, technology-driven chain of life. Your contribution today is the heartbeat of tomorrow." %}
+                </p>
+            </div>
 
         </div>
     </main>
@@ -104,33 +223,36 @@
                 <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
                     <span class="fs-4 fw-bold" style="color: #8b0000;">🩸 Blood Chain</span>
                 </a>
-                <p class="text-body-secondary small">Advancing blood donation through transparency and technology.</p>
+                <p class="text-body-secondary small">{% translate "Advancing blood donation through transparency and technology." %}</p>
                 <p class="text-body-secondary">© 2026</p>
             </div>
+            <br>
             <div class="col mb-3">
-                <h5 class="fw-bold mb-3">Navigation</h5>
+                <h5 class="fw-bold mb-3">{% translate "Navigation" %}</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-body-secondary">Home</a></li>
-                    <li class="nav-item mb-2"><a href="{% url 'features' %}" class="nav-link p-0 text-body-secondary">Features</a></li>
-                    <li class="nav-item mb-2"><a href="{% url 'map' %}" class="nav-link p-0 text-body-secondary">Donation Map</a></li>
-                    <li class="nav-item mb-2"><a href="{% url 'about' %}" class="nav-link p-0 text-body-secondary">About Us</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-body-secondary">{% translate "Home" %}</a></li>
+                    <li class="nav-item mb-2"><a href="#features" class="nav-link p-0 text-body-secondary">{% translate "Features" %}</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'map' %}" class="nav-link p-0 text-body-secondary">{% translate "Donation Map" %}</a></li>
+                    <li class="nav-item mb-2"><a href="#about" class="nav-link p-0 text-body-secondary">{% translate "About Us" %}</a></li>
                 </ul>
             </div>
+            <br>
             <div class="col mb-3">
-                <h5 class="fw-bold mb-3"><a href="{% url 'profile' %}" class="nav-link p-0">Account</a></h5>
+                <h5 class="fw-bold mb-3"><a href="{% url 'profile' %}" class="nav-link p-0">{% translate "Account" %}</a></h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="{% url 'register' %}" class="nav-link p-0 text-body-secondary">Register as Donor</a></li>
-                    <li class="nav-item mb-2"><a href="{% url 'login' %}" class="nav-link p-0 text-body-secondary">Login</a></li>
-                    <li class="nav-item mb-2"><a href="{% url 'terms' %}" class="nav-link p-0 text-body-secondary">Terms and Conditions</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'register' %}" class="nav-link p-0 text-body-secondary">{% translate "Register as Donor" %}</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'login' %}" class="nav-link p-0 text-body-secondary">{% translate "Login" %}</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'terms' %}" class="nav-link p-0 text-body-secondary">{% translate "Terms and Conditions" %}</a></li>
                 </ul>
             </div>
+            <br>
             <div class="col mb-3">
-                <h5 class="fw-bold mb-3">Social Media</h5>
+                <h5 class="fw-bold mb-3">{% translate "Social Media" %}</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="https://youtube.com" class="nav-link p-0 text-body-secondary">YouTube</a></li>
-                    <li class="nav-item mb-2"><a href="https://facebook.com" class="nav-link p-0 text-body-secondary">Facebook</a></li>
-                    <li class="nav-item mb-2"><a href="https://x.com" class="nav-link p-0 text-body-secondary">X (Twitter)</a></li>
-                    <li class="nav-item mb-2"><a href="https://instagram.com" class="nav-link p-0 text-body-secondary">Instagram</a></li>
+                    <li class="nav-item mb-2"><a href="https://youtube.com" class="nav-link p-0 text-body-secondary">{% translate "YouTube" %}</a></li>
+                    <li class="nav-item mb-2"><a href="https://facebook.com" class="nav-link p-0 text-body-secondary">{% translate "Facebook" %}</a></li>
+                    <li class="nav-item mb-2"><a href="https://x.com" class="nav-link p-0 text-body-secondary">{% translate "X (Twitter)" %}</a></li>
+                    <li class="nav-item mb-2"><a href="https://instagram.com" class="nav-link p-0 text-body-secondary">{% translate "Instagram" %}</a></li>
                 </ul>
             </div>
         </footer>
@@ -141,7 +263,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Quiz</h5>
+                    <h5 class="modal-title">{% translate "Quiz" %}</h5>
                     <button type="button" class="btn-close closeTest" data-bs-dismiss="modal" aria-label="Close" ></button>
                 </div>
                 <div class="modal-body" id="quiz-container">
@@ -149,7 +271,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary closeTest" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary closeTest" data-bs-dismiss="modal">{% translate "Close" %}</button>
                 </div>
             </div>
         </div>

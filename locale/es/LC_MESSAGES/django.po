@@ -1,0 +1,468 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-30 20:24+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+#: .\Donations\templates\index.html:25 .\Donations\templates\index.html:224
+#: .\Users\templates\my_donations.html:45 .\Users\templates\profile.html:45
+#: .\Users\templates\settings.html:45
+msgid "Home"
+msgstr "Inicio"
+
+#: .\Donations\templates\index.html:28 .\Donations\templates\index.html:120
+#: .\Donations\templates\index.html:225
+msgid "Features"
+msgstr "Características"
+
+#: .\Donations\templates\index.html:31
+msgid "Pricing"
+msgstr "Precios"
+
+#: .\Donations\templates\index.html:34
+msgid "Map"
+msgstr "Mapa"
+
+#: .\Donations\templates\index.html:37
+msgid "About us"
+msgstr "Sobre nosotros"
+
+#: .\Donations\templates\index.html:40 .\Donations\templates\index.html:231
+msgid "Account"
+msgstr "Cuenta"
+
+#: .\Donations\templates\index.html:45
+msgid "Language"
+msgstr "Idioma"
+
+#: .\Donations\templates\index.html:73
+msgid "Test"
+msgstr "Prueba"
+
+#: .\Donations\templates\index.html:76
+msgid "Blood Donation Testing"
+msgstr "Prueba de Donación de Sangre"
+
+#: .\Donations\templates\index.html:77
+msgid "Find out if you are eligible to donate blood"
+msgstr "Descubra si es elegible para donar sangre"
+
+#: .\Donations\templates\index.html:77
+msgid "According to WHO criteria"
+msgstr "Según los criterios de la OMS"
+
+#: .\Donations\templates\index.html:78
+msgid "Take the test"
+msgstr "Hacer la prueba"
+
+#: .\Donations\templates\index.html:101
+msgid "Blood Stock Levels"
+msgstr "Niveles de Reservas de Sangre"
+
+#: .\Donations\templates\index.html:128
+msgid "Real-Time Inventory"
+msgstr "Inventario en tiempo real"
+
+#: .\Donations\templates\index.html:129
+msgid ""
+"Access live data on blood availability across all connected medical centers "
+"instantly."
+msgstr ""
+"Acceda instantáneamente a datos en vivo sobre la disponibilidad de sangre en "
+"todos los centros médicos conectados."
+
+#: .\Donations\templates\index.html:139
+msgid "Blockchain Security"
+msgstr "Seguridad Blockchain"
+
+#: .\Donations\templates\index.html:140
+msgid ""
+"Every donation is encrypted and tracked, ensuring complete transparency and "
+"zero data fraud."
+msgstr ""
+"Cada donación se encripta y se rastrea, garantizando una transparencia total "
+"y cero fraude de datos."
+
+#: .\Donations\templates\index.html:150
+msgid "Smart Donor Matching"
+msgstr "Emparejamiento inteligente de donantes"
+
+#: .\Donations\templates\index.html:151
+msgid ""
+"Our system matches regional blood deficits with your profile to send "
+"targeted requests only when your help is truly vital."
+msgstr ""
+"Nuestro sistema asocia los déficits de sangre regionales con su perfil para "
+"enviar solicitudes específicas solo cuando su ayuda es vital."
+
+#: .\Donations\templates\index.html:159
+#| msgid "Blood Donation Testing"
+msgid "Donation Compensation"
+msgstr "Prueba de Donación de Sangre"
+
+#: .\Donations\templates\index.html:168
+msgid "Pediatric / Partial Unit"
+msgstr "Unidad pediátrica / parcial"
+
+#: .\Donations\templates\index.html:171
+msgid "Average reimbursement"
+msgstr "Reembolso promedio"
+
+#: .\Donations\templates\index.html:173
+msgid "Quick recovery time"
+msgstr "Tiempo de recuperación rápido"
+
+#: .\Donations\templates\index.html:174
+msgid "Basic medical screening"
+msgstr "Examen médico básico"
+
+#: .\Donations\templates\index.html:182
+msgid "STANDARD DOSE"
+msgstr "DOSIS ESTÁNDAR"
+
+#: .\Donations\templates\index.html:189
+msgid "Standard Whole Blood Unit"
+msgstr "Unidad de sangre completa estándar"
+
+#: .\Donations\templates\index.html:192
+msgid "Global average rate"
+msgstr "Tasa promedio global"
+
+#: .\Donations\templates\index.html:194
+msgid "Full health report"
+msgstr "Informe de salud completo"
+
+#: .\Donations\templates\index.html:195
+msgid "High impact on lives"
+msgstr "Gran impacto en las vidas"
+
+#: .\Donations\templates\index.html:196
+msgid "Post-donation meal"
+msgstr "Refrigerio post-donación"
+
+#: .\Donations\templates\index.html:203
+msgid "Reimbursement values may vary by country and local regulations."
+msgstr "Los valores de reembolso pueden variar según el país y las regulaciones locales."
+
+msgid "At BloodChain, we believe that in the age of rapid technological advancement, no human life should ever be lost due to a lack of blood availability. Our journey began with a simple but profound observation: the world has enough potential donors, but the bridge between them and those in critical need is often broken, slow, or opaque. BloodChain is not just another database; it is a global, decentralized ecosystem designed to revolutionize how we think about, manage, and execute blood donation. We leverage the power of modern web technologies and transparent data management to ensure that every drop counts and every donor is recognized. Despite medical breakthroughs, blood shortage remains a silent global crisis. Every two seconds, someone in the world needs blood. However, current systems often struggle with inefficient logistical chains, delayed emergency notifications, and a lack of public trust in how their donations are utilized. Rare blood types frequently go missing when they are needed most, and communication between regional medical centers is often fragmented. BloodChain was built as a direct response to these systemic failures, providing a unified, real-time solution that scales across borders and languages. Our platform stands on three fundamental pillars: Transparency, Accessibility, and Recognition. By using advanced tracking, we provide medical institutions with an immutable record of blood stocks. This eliminates data fraud and ensures that supply levels are always accurate. With support for seven major languages and a mobile-first design, we lower the barrier to entry for donors worldwide. Whether you are in a bustling metropolis or a remote village, BloodChain connects you to the nearest life-saving opportunity. We gamify the experience to build a lifelong habit of donation. Through digital achievements and a clear impact history, donors can see exactly how many lives they’ve helped save. We are constantly evolving. Our roadmap includes integrating AI-driven predictive analytics to forecast regional blood demand before a crisis occurs. By analyzing seasonal trends and local health data, BloodChain will move from being reactive to proactive, alerting donors weeks in advance of a predicted shortage. BloodChain is more than a project; it is a movement. We invite medical centers, governments, and every healthy individual to join our network. Together, we can turn a fragmented system into a resilient, technology-driven chain of life. Your contribution today is the heartbeat of tomorrow."
+msgstr "En BloodChain, creemos que en la era del rápido avance tecnológico, ninguna vida humana debería perderse debido a la falta de disponibilidad de sangre. Nuestro viaje comenzó con una observación simple pero profunda: el mundo tiene suficientes donantes potenciales, pero el puente entre ellos y quienes tienen una necesidad crítica a menudo está roto, es lento o es opaco. BloodChain no es solo otra base de datos; es un ecosistema global y descentralizado diseñado para revolucionar la forma en que pensamos, gestionamos y ejecutamos la donación de sangre. Aprovechamos el poder de las tecnologías web modernas y la gestión transparente de datos para garantizar que cada gota cuente y que cada donante sea reconocido. A pesar de los avances médicos, la escasez de sangre sigue siendo una crisis global silenciosa. Cada dos segundos, alguien en el mundo necesita sangre. BloodChain se construyó como una respuesta directa a estos fallos sistémicos, proporcionando una solución unificada en tiempo real que se escala a través de fronteras e idiomas. Nuestra plataforma se basa en tres pilares fundamentales: Transparencia, Accesibilidad y Reconocimiento. Al utilizar un seguimiento avanzado, proporcionamos a las instituciones médicas un registro inmutable de las existencias de sangre. Esto elimina el fraude de datos y garantiza que los niveles de suministro sean siempre precisos. Ya sea que se encuentre en una metrópolis bulliciosa o en un pueblo remoto, BloodChain lo conecta con la oportunidad más cercana de salvar vidas. Gamificamos la experiencia para generar un hábito de donación de por vida. BloodChain es más que un proyecto; es un movimiento. Juntos, podemos convertir un sistema fragmentado en una cadena de vida resistente e impulsada por la tecnología. Tu contribución hoy es el latido del mañana."
+
+msgid "About"
+msgstr "Acerca de"
+
+#: .\Donations\templates\index.html:218
+msgid "Advancing blood donation through transparency and technology."
+msgstr ""
+"Avanzando en la donación de sangre mediante transparencia y tecnología."
+
+#: .\Donations\templates\index.html:222
+msgid "Navigation"
+msgstr "Navegación"
+
+#: .\Donations\templates\index.html:226
+msgid "Donation Map"
+msgstr "Mapa de Donación"
+
+#: .\Donations\templates\index.html:227
+msgid "About Us"
+msgstr "Nosotros"
+
+#: .\Donations\templates\index.html:233
+msgid "Register as Donor"
+msgstr "Registrarse como Donante"
+
+#: .\Donations\templates\index.html:234 .\Users\templates\login.html:8
+#: .\Users\templates\login.html:29
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: .\Donations\templates\index.html:235 .\Users\templates\register.html:74
+#: .\Users\templates\termsandconditions.html:8
+#: .\Users\templates\termsandconditions.html:18
+msgid "Terms and Conditions"
+msgstr "Términos y Condiciones"
+
+#: .\Donations\templates\index.html:239
+msgid "Social Media"
+msgstr "Redes Sociales"
+
+#: .\Donations\templates\index.html:241
+msgid "YouTube"
+msgstr "YouTube"
+
+#: .\Donations\templates\index.html:242
+msgid "Facebook"
+msgstr "Facebook"
+
+#: .\Donations\templates\index.html:243
+msgid "X (Twitter)"
+msgstr "X (Twitter)"
+
+#: .\Donations\templates\index.html:244
+msgid "Instagram"
+msgstr "Instagram"
+
+#: .\Donations\templates\index.html:255
+msgid "Quiz"
+msgstr "Cuestionario"
+
+#: .\Donations\templates\index.html:263
+msgid "Close"
+msgstr "Cerrar"
+
+#: .\Users\templates\login.html:16
+msgid "← Back to Home"
+msgstr "← Volver al inicio"
+
+#: .\Users\templates\login.html:17
+msgid "Welcome Back, Hero!"
+msgstr "¡Bienvenido de nuevo, Héroe!"
+
+#: .\Users\templates\login.html:21
+msgid "Email address"
+msgstr "Correo electrónico"
+
+#: .\Users\templates\login.html:25 .\Users\templates\register.html:63
+msgid "Password"
+msgstr "Contraseña"
+
+#: .\Users\templates\login.html:32 .\Users\templates\register.html:17
+msgid "Join Blood Chain"
+msgstr "Unirse a Blood Chain"
+
+#: .\Users\templates\my_donations.html:40 .\Users\templates\profile.html:40
+#: .\Users\templates\profile.html:69 .\Users\templates\settings.html:40
+msgid "Profile"
+msgstr "Perfil"
+
+#: .\Users\templates\my_donations.html:50 .\Users\templates\profile.html:50
+#: .\Users\templates\settings.html:50
+msgid "My Donations"
+msgstr "Mis donaciones"
+
+#: .\Users\templates\my_donations.html:55 .\Users\templates\profile.html:55
+#: .\Users\templates\settings.html:8 .\Users\templates\settings.html:55
+msgid "Settings"
+msgstr "Configuración"
+
+#: .\Users\templates\my_donations.html:60 .\Users\templates\profile.html:60
+#: .\Users\templates\settings.html:60
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: .\Users\templates\my_donations.html:69
+msgid "My Donations History"
+msgstr "Historial de mis donaciones"
+
+#: .\Users\templates\my_donations.html:72 .\Users\templates\profile.html:89
+msgid "Rank"
+msgstr "Rango"
+
+#: .\Users\templates\my_donations.html:79
+msgid "My Donation Activity"
+msgstr "Mi actividad de donación"
+
+#: .\Users\templates\my_donations.html:110
+msgid "Date"
+msgstr "Fecha"
+
+#: .\Users\templates\my_donations.html:111
+msgid "Amount (ml)"
+msgstr "Cantidad (ml)"
+
+#: .\Users\templates\my_donations.html:112 .\Users\templates\profile.html:86
+#: .\Users\templates\register.html:46
+msgid "Blood Type"
+msgstr "Tipo de sangre"
+
+#: .\Users\templates\my_donations.html:130
+msgid "Previous"
+msgstr "Anterior"
+
+#: .\Users\templates\my_donations.html:141
+msgid "Next"
+msgstr "Siguiente"
+
+#: .\Users\templates\my_donations.html:147
+msgid "You haven't made any donations yet"
+msgstr "Aún no has realizado ninguna donación"
+
+#: .\Users\templates\profile.html:71
+msgid "Edit in Settings"
+msgstr "Editar en configuración"
+
+#: .\Users\templates\profile.html:97 .\Users\templates\register.html:25
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: .\Users\templates\profile.html:101
+msgid "Name"
+msgstr "Nombre"
+
+#: .\Users\templates\profile.html:105 .\Users\templates\register.html:32
+msgid "Email"
+msgstr "Email"
+
+#: .\Users\templates\profile.html:109
+msgid "Surname"
+msgstr "Apellido"
+
+#: .\Users\templates\profile.html:113
+msgid "Phone"
+msgstr "Teléfono"
+
+#: .\Users\templates\profile.html:117
+msgid "Address"
+msgstr "Dirección"
+
+#: .\Users\templates\register.html:8
+msgid "Register"
+msgstr "Registrarse"
+
+#: .\Users\templates\register.html:16
+msgid "Back to Home"
+msgstr "Volver al inicio"
+
+#: .\Users\templates\register.html:40
+msgid "Full Name"
+msgstr "Nombre completo"
+
+#: .\Users\templates\register.html:51
+msgid "Phone Number"
+msgstr "Número de teléfono"
+
+#: .\Users\templates\register.html:56
+msgid "Profile Photo"
+msgstr "Foto de perfil"
+
+#: .\Users\templates\register.html:67
+msgid "Confirm Password"
+msgstr "Confirmar contraseña"
+
+#: .\Users\templates\register.html:74
+msgid "I agree to the"
+msgstr "Acepto los"
+
+#: .\Users\templates\register.html:81
+msgid "Register as Hero"
+msgstr "Registrarse como Héroe"
+
+#: .\Users\templates\register.html:85
+msgid "Login here"
+msgstr "Inicia sesión aquí"
+
+#: .\Users\templates\settings.html:34
+msgid "Donor"
+msgstr "Donante"
+
+#: .\Users\templates\settings.html:68
+msgid "Edit Profile"
+msgstr "Editar perfil"
+
+#: .\Users\templates\settings.html:116
+msgid "Save Settings"
+msgstr "Guardar configuración"
+
+#: .\Users\templates\settings.html:118
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: .\Users\templates\termsandconditions.html:19
+msgid "Last Updated"
+msgstr "Última actualización"
+
+#: .\Users\templates\termsandconditions.html:20
+msgid "1. Acceptance of Terms"
+msgstr "1. Aceptación de los términos"
+
+#: .\Users\templates\termsandconditions.html:22
+msgid "2. User Eligibility and Registration"
+msgstr "2. Elegibilidad y registro del usuario"
+
+#: .\Users\templates\termsandconditions.html:23
+msgid "Voluntary Donation"
+msgstr "Donación voluntaria"
+
+#: .\Users\templates\termsandconditions.html:24
+msgid "Health Information"
+msgstr "Información de salud"
+
+#: .\Users\templates\termsandconditions.html:25
+msgid "Age Requirement"
+msgstr "Requisito de edad"
+
+#: .\Users\templates\termsandconditions.html:26
+msgid "3. Data Privacy and Blockchain"
+msgstr "3. Privacidad de datos y Blockchain"
+
+#: .\Users\templates\termsandconditions.html:27
+msgid "Transparency"
+msgstr "Transparencia"
+
+#: .\Users\templates\termsandconditions.html:28
+msgid "Anonymity"
+msgstr "Anonimato"
+
+#: .\Users\templates\termsandconditions.html:29
+msgid "4. Blood Inventory and Ranks"
+msgstr "4. Inventario de sangre y rangos"
+
+#: .\Users\templates\termsandconditions.html:30
+msgid "Real-time Tracking"
+msgstr "Seguimiento en tiempo real"
+
+#: .\Users\templates\termsandconditions.html:31
+msgid "Gamification"
+msgstr "Ludificación"
+
+#: .\Users\templates\termsandconditions.html:32
+msgid "5. Disclaimer of Liability"
+msgstr "5. Descargo de responsabilidad"
+
+#: .\Users\templates\termsandconditions.html:33
+msgid ""
+"Blood Chain is a platform to connect donors and institutions. We are not a "
+"medical facility. Actual blood collection and testing are performed by "
+"certified medical professionals. Blood Chain is not liable for any medical "
+"complications arising from the physical act of donation."
+msgstr ""
+"Blood Chain es una plataforma para conectar donantes e instituciones. No "
+"somos una instalación médica. La extracción y el análisis de sangre reales "
+"son realizados por profesionales médicos certificados. Blood Chain no se "
+"hace responsable de ninguna complicación médica derivada del acto físico de "
+"la donación."
+
+#: .\Users\templates\termsandconditions.html:34
+msgid "6. Prohibited Conduct"
+msgstr "6. Conducta prohibida"
+
+#: .\Users\templates\termsandconditions.html:35
+msgid "Users are prohibited from:"
+msgstr "Se prohíbe a los usuarios:"
+
+#: .\Users\templates\termsandconditions.html:37
+msgid "Creating multiple accounts to manipulate donation statistics."
+msgstr "Crear múltiples cuentas para manipular las estadísticas de donación."
+
+#: .\Users\templates\termsandconditions.html:38
+msgid "Providing false health documentation."
+msgstr "Proporcionar documentación de salud falsa."
+
+#: .\Users\templates\termsandconditions.html:39
+msgid "Attempting to disrupt the blockchain network or platform security."
+msgstr ""
+"Intentar interrumpir la red blockchain o la seguridad de la plataforma."

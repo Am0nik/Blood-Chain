@@ -19,9 +19,15 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
+from django.conf.urls.i18n import i18n_patterns
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name='index'),
-    path('donations/',include('Donations.urls')),
-    path('users/',include('Users.urls'))
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('i18n/', include('django.conf.urls.i18n')),
+]
+
+urlpatterns += i18n_patterns(
+    path('', views.index, name='index'),
+    path('donations/', include('Donations.urls')),
+    path('users/', include('Users.urls')),
+    prefix_default_language=True
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

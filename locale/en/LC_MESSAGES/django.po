@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-30 19:09+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\Donations\templates\index.html:24 .\Donations\templates\index.html:114
+msgid "Home"
+msgstr "Home"
+
+#: .\Donations\templates\index.html:27 .\Donations\templates\index.html:115
+msgid "Features"
+msgstr "Features"
+
+#: .\Donations\templates\index.html:30
+msgid "Pricing"
+msgstr "Pricing"
+
+#: .\Donations\templates\index.html:33
+msgid "Map"
+msgstr "Map"
+
+#: .\Donations\templates\index.html:36
+msgid "About us"
+msgstr "About us"
+
+#: .\Donations\templates\index.html:39 .\Donations\templates\index.html:121
+msgid "Account"
+msgstr "Account"
+
+#: .\Donations\templates\index.html:50
+msgid "Test"
+msgstr "Test"
+
+#: .\Donations\templates\index.html:53
+msgid "Blood Donation Testing"
+msgstr "Blood Donation Testing"
+
+#: .\Donations\templates\index.html:54
+msgid "Find out if you are eligible to donate blood"
+msgstr "Find out if you are eligible to donate blood"
+
+#: .\Donations\templates\index.html:54
+msgid "According to WHO criteria"
+msgstr "According to WHO criteria"
+
+#: .\Donations\templates\index.html:55
+msgid "Take the test"
+msgstr "Take the test"
+
+#: .\Donations\templates\index.html:78
+msgid "Blood Stock Levels"
+msgstr "Blood Stock Levels"
+
+#: .\Donations\templates\index.html:108
+msgid "Advancing blood donation through transparency and technology."
+msgstr "Advancing blood donation through transparency and technology."
+
+#: .\Donations\templates\index.html:112
+msgid "Navigation"
+msgstr "Navigation"
+
+#: .\Donations\templates\index.html:116
+msgid "Donation Map"
+msgstr "Donation Map"
+
+#: .\Donations\templates\index.html:117
+msgid "About Us"
+msgstr "About Us"
+
+#: .\Donations\templates\index.html:123
+msgid "Register as Donor"
+msgstr "Register as Donor"
+
+#: .\Donations\templates\index.html:124
+msgid "Login"
+msgstr "Login"
+
+#: .\Donations\templates\index.html:125
+msgid "Terms and Conditions"
+msgstr "Terms and Conditions"
+
+#: .\Donations\templates\index.html:129
+msgid "Social Media"
+msgstr "Social Media"
+
+#: .\Donations\templates\index.html:131
+msgid "YouTube"
+msgstr "YouTube"
+
+#: .\Donations\templates\index.html:132
+msgid "Facebook"
+msgstr "Facebook"
+
+#: .\Donations\templates\index.html:133
+msgid "X (Twitter)"
+msgstr "X (Twitter)"
+
+#: .\Donations\templates\index.html:134
+msgid "Instagram"
+msgstr "Instagram"
+
+#: .\Donations\templates\index.html:145
+msgid "Quiz"
+msgstr "Quiz"
+
+#: .\Donations\templates\index.html:153
+msgid "Close"
+msgstr "Close"
