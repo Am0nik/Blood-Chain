@@ -1,0 +1,177 @@
+{% load static %}
+{% load i18n %}
+{% load l10n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ news_item.title }}</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'dist/leaflet.css' %}" />
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body lang="en">
+    <header >
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="{% static 'images/logo.png' %}" alt="Logo" width="120" height="94" class="d-inline-block align-text-top">
+                <a class="navbar-brand" href="{% url 'index' %}">Blood Chain</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">{% translate "Home" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">{% translate "Features" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#price">{% translate "Pricing" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'map' %}">{% translate "Map" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="}">{% translate "About us" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'profile' %}"><b>{% translate "Account" %}</b></a>
+                        </li>
+                    </ul>
+                    <div class="dropdown ms-auto">
+                        <button class="btn btn-dark dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 100px;width: 100px;">
+                            <i class="bi bi-translate"></i> {% translate "Language" %}
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark text-center">
+                            {% get_current_language as CURRENT_LANG %}
+                            {% get_available_languages as ALL_LANGS %}
+                            {% for lang_code, lang_name in ALL_LANGS %}
+                            <li>
+                                <form action="{% url 'set_language' %}" method="post">
+                                    {% csrf_token %}
+                                    <input name="next" type="hidden" value="/"> 
+                                    <input name="language" type="hidden" value="{{ lang_code }}">
+                                    <button type="submit" class="dropdown-item {% if lang_code == CURRENT_LANG %}active{% endif %}">
+                                        {{ lang_name }} ({{ lang_code|upper }})
+                                    </button>
+                                </form>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container mt-5">
+            <p>Partner Hospitals in the BloodChain network represent critical medical institutions where blood supply is continuously required to support surgeries, trauma care, and emergency treatments.
+            While these hospitals are not direct blood donation centers, they are part of the life-saving ecosystem that depends on constant and timely blood availability.
+            Each listed institution reflects a region where demand for blood components is active, and where delays in supply can directly impact patient survival.
+            By connecting donors to nearby certified blood collection centers that supply these hospitals, BloodChain ensures that no critical demand goes unnoticed or unmet.
+            These institutions include major medical centers across the United States, Europe, Asia, and South America, forming a global network of life-critical care facilities.</p>
+            <small class="text-body secondary">*If you don't see the dot, switch to English</small>
+            <div id="map"></div>
+        </div>
+    </main>
+
+    <div class="container mt-5">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <span class="fs-4 fw-bold" style="color: #8b0000;">🩸 Blood Chain</span>
+                </a>
+                <p class="text-body-secondary small">{% translate "Advancing blood donation through transparency and technology." %}</p>
+                <p class="text-body-secondary">© 2026</p>
+            </div>
+            <br>
+            <div class="col mb-3">
+                <h5 class="fw-bold mb-3">{% translate "Navigation" %}</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-body-secondary">{% translate "Home" %}</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'index' %}#features" class="nav-link p-0 text-body-secondary">{% translate "Features" %}</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'map' %}" class="nav-link p-0 text-body-secondary">{% translate "Donation Map" %}</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'index' %}#about-us" class="nav-link p-0 text-body-secondary">{% translate "About Us" %}</a></li>
+                </ul>
+            </div>
+            <br>
+            <div class="col mb-3">
+                <h5 class="fw-bold mb-3"><a href="{% url 'profile' %}" class="nav-link p-0">{% translate "Account" %}</a></h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="{% url 'register' %}" class="nav-link p-0 text-body-secondary">{% translate "Register as Donor" %}</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'login' %}" class="nav-link p-0 text-body-secondary">{% translate "Login" %}</a></li>
+                    <li class="nav-item mb-2"><a href="{% url 'terms' %}" class="nav-link p-0 text-body-secondary">{% translate "Terms and Conditions" %}</a></li>
+                </ul>
+            </div>
+            <br>
+            <div class="col mb-3">
+                <h5 class="fw-bold mb-3">{% translate "Social Media" %}</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="https://youtube.com" class="nav-link p-0 text-body-secondary">{% translate "YouTube" %}</a></li>
+                    <li class="nav-item mb-2"><a href="https://facebook.com" class="nav-link p-0 text-body-secondary">{% translate "Facebook" %}</a></li>
+                    <li class="nav-item mb-2"><a href="https://x.com" class="nav-link p-0 text-body-secondary">{% translate "X (Twitter)" %}</a></li>
+                    <li class="nav-item mb-2"><a href="https://instagram.com" class="nav-link p-0 text-body-secondary">{% translate "Instagram" %}</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <div class="modal" tabindex="-1" id="testModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{% translate "Quiz" %}</h5>
+                    <button type="button" class="btn-close closeTest" data-bs-dismiss="modal" aria-label="Close" ></button>
+                </div>
+                <div class="modal-body" id="quiz-container">
+                    
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary closeTest" data-bs-dismiss="modal">{% translate "Close" %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    var map = L.map('map').setView([20, 0], 2);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    {% for center in centers %}
+        console.log({{ center.lat }}, {{ center.lon }});
+        {% if center.lat is not None and center.lon is not None %}
+            L.circle([{{ center.lat|floatformat:6 }}, {{ center.lon|floatformat:6 }}], {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.5,
+                radius: 1000
+            }).addTo(map)
+              .bindPopup("<b>{{ center.name|escapejs }}</b>");
+        {% endif %}
+    {% endfor %}
+
+});
+</script>
+<script>
+console.log("Centers loaded:", {{ centers|length }});
+</script>
+<script src="{% static 'dist/leaflet.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>

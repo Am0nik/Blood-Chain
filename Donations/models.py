@@ -1,5 +1,9 @@
+from urllib import response
+
 from django.db import models
 from ckeditor.fields import RichTextField
+import requests
+from urllib.parse import quote
 # Create your models here.
 class News(models.Model):
     title = models.CharField(max_length=200)
@@ -92,3 +96,50 @@ class Donation(models.Model):
 
     def __str__(self):
         return f"Donation {self.user.username} - {self.date.strftime('%d.%m.%Y')}"
+
+
+
+
+class DonationNeed(models.Model):
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=500)
+    lat = models.FloatField(blank=True, null=True)
+    lon = models.FloatField(blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        if self.address and (self.lat is None or self.lon is None):
+            try:
+                clean_address = self.address.strip()
+
+                url = "https://nominatim.openstreetmap.org/search"
+                params = {
+                    "q": clean_address,
+                    "format": "json",
+                    "limit": 1,
+                    "addressdetails": 1
+                }
+
+                headers = {
+                    "User-Agent": "BloodChainApp/1.0"
+                }
+
+                response = requests.get(
+                    url,
+                    params=params,
+                    headers=headers,
+                    timeout=10
+                )
+
+                data = response.json()
+
+                print("Searching:", clean_address)
+                print("Result:", data)
+
+                if data:
+                    self.lat = float(data[0]["lat"])
+                    self.lon = float(data[0]["lon"])
+
+            except Exception as e:
+                print("Error geocoding:", e)
+
+        super().save(*args, **kwargs)

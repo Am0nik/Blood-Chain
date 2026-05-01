@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en'
 LANGUAGES = [
-    ('ru', 'Russian'),
+    #('ru', 'Russian'),
     ('en', 'English'),
     ('es', 'Spanish'),
     ('fr', 'French'),
@@ -147,3 +147,7 @@ LOGIN_URL = 'login'
 LOCALE_PATHS = [
     BASE_DIR / 'locale/',
 ]
+
+USE_L10N = False 
+DECIMAL_SEPARATOR = '.'
+USE_THOUSAND_SEPARATOR = False

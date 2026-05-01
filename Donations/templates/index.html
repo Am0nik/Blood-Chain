@@ -2,7 +2,6 @@
 {% load i18n %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}" {% if LANGUAGE_CODE == 'ar' %}dir="rtl"{% endif %}>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +33,7 @@
                             <a class="nav-link" href="{% url 'map' %}">{% translate "Map" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="}">{% translate "About us" %}</a>
+                            <a class="nav-link" href="#about-us">{% translate "About us" %}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' %}"><b>{% translate "Account" %}</b></a>
@@ -233,7 +232,7 @@
                     <li class="nav-item mb-2"><a href="{% url 'index' %}" class="nav-link p-0 text-body-secondary">{% translate "Home" %}</a></li>
                     <li class="nav-item mb-2"><a href="#features" class="nav-link p-0 text-body-secondary">{% translate "Features" %}</a></li>
                     <li class="nav-item mb-2"><a href="{% url 'map' %}" class="nav-link p-0 text-body-secondary">{% translate "Donation Map" %}</a></li>
-                    <li class="nav-item mb-2"><a href="#about" class="nav-link p-0 text-body-secondary">{% translate "About Us" %}</a></li>
+                    <li class="nav-item mb-2"><a href="#about-us" class="nav-link p-0 text-body-secondary">{% translate "About Us" %}</a></li>
                 </ul>
             </div>
             <br>
