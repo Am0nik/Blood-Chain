@@ -19,19 +19,25 @@
     </style>
 </head>
 <body>
-
+<header class="navbar sticky-top bg-white flex-md-nowrap p-0 shadow-sm d-md-none" style="margin-top: 20px;padding: 50px;">
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#sidebarMenu" 
+            aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</header>
 <div class="container-fluid">
     <div class="row">
-        <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse shadow-sm">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse bg-white shadow-sm">
             <div class="position-sticky pt-3">
-                <div class="text-center mb-4">
+                <div class="text-center mb-4 d-none d-md-block">
                     {% if user.photo %}
                         <img src="{{ user.photo.url }}" class="rounded-circle profile-img mb-2 shadow">
                     {% else %}
                         <img src="https://placeholder.com" class="rounded-circle profile-img mb-2 shadow">
                     {% endif %}
                     <h6 class="fw-bold">{{ user.username }}</h6>
-                    <span class="badge bg-danger">{% translate "Donor" %} ({{ user.blood_type }})</span>
+                    <span class="badge bg-danger">Donor ({{ user.blood_type }})</span>
                 </div>
 
                 <ul class="nav flex-column mt-4">
